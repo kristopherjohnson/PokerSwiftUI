@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E6E10D022B3078900A16817 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E10CF22B3078900A16817 /* AppDelegate.swift */; };
+		4E6E10D222B3078900A16817 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E10D122B3078900A16817 /* SceneDelegate.swift */; };
+		4E6E10D422B3078900A16817 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E10D322B3078900A16817 /* ContentView.swift */; };
+		4E6E10D622B3078B00A16817 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E6E10D522B3078B00A16817 /* Assets.xcassets */; };
+		4E6E10D922B3078B00A16817 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E6E10D822B3078B00A16817 /* Preview Assets.xcassets */; };
+		4E6E10DC22B3078B00A16817 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E6E10DA22B3078B00A16817 /* LaunchScreen.storyboard */; };
+		4E6E10E722B3078B00A16817 /* PokerSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E10E622B3078B00A16817 /* PokerSwiftUITests.swift */; };
+		4E6E10F222B3078B00A16817 /* PokerSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E10F122B3078B00A16817 /* PokerSwiftUIUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4E6E10E322B3078B00A16817 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E6E10C422B3078900A16817 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E6E10CB22B3078900A16817;
+			remoteInfo = PokerSwiftUI;
+		};
+		4E6E10EE22B3078B00A16817 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E6E10C422B3078900A16817 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E6E10CB22B3078900A16817;
+			remoteInfo = PokerSwiftUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4E6E10CC22B3078900A16817 /* PokerSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokerSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E6E10CF22B3078900A16817 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4E6E10D122B3078900A16817 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4E6E10D322B3078900A16817 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4E6E10D522B3078B00A16817 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4E6E10D822B3078B00A16817 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4E6E10DB22B3078B00A16817 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4E6E10DD22B3078B00A16817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E6E10E222B3078B00A16817 /* PokerSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokerSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E6E10E622B3078B00A16817 /* PokerSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokerSwiftUITests.swift; sourceTree = "<group>"; };
+		4E6E10E822B3078B00A16817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E6E10ED22B3078B00A16817 /* PokerSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokerSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E6E10F122B3078B00A16817 /* PokerSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokerSwiftUIUITests.swift; sourceTree = "<group>"; };
+		4E6E10F322B3078B00A16817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4E6E10C922B3078900A16817 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E6E10DF22B3078B00A16817 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E6E10EA22B3078B00A16817 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4E6E10C322B3078900A16817 = {
+			isa = PBXGroup;
+			children = (
+				4E6E10CE22B3078900A16817 /* PokerSwiftUI */,
+				4E6E10E522B3078B00A16817 /* PokerSwiftUITests */,
+				4E6E10F022B3078B00A16817 /* PokerSwiftUIUITests */,
+				4E6E10CD22B3078900A16817 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4E6E10CD22B3078900A16817 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4E6E10CC22B3078900A16817 /* PokerSwiftUI.app */,
+				4E6E10E222B3078B00A16817 /* PokerSwiftUITests.xctest */,
+				4E6E10ED22B3078B00A16817 /* PokerSwiftUIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4E6E10CE22B3078900A16817 /* PokerSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				4E6E10CF22B3078900A16817 /* AppDelegate.swift */,
+				4E6E10D122B3078900A16817 /* SceneDelegate.swift */,
+				4E6E10D322B3078900A16817 /* ContentView.swift */,
+				4E6E10D522B3078B00A16817 /* Assets.xcassets */,
+				4E6E10DA22B3078B00A16817 /* LaunchScreen.storyboard */,
+				4E6E10DD22B3078B00A16817 /* Info.plist */,
+				4E6E10D722B3078B00A16817 /* Preview Content */,
+			);
+			path = PokerSwiftUI;
+			sourceTree = "<group>";
+		};
+		4E6E10D722B3078B00A16817 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4E6E10D822B3078B00A16817 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4E6E10E522B3078B00A16817 /* PokerSwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4E6E10E622B3078B00A16817 /* PokerSwiftUITests.swift */,
+				4E6E10E822B3078B00A16817 /* Info.plist */,
+			);
+			path = PokerSwiftUITests;
+			sourceTree = "<group>";
+		};
+		4E6E10F022B3078B00A16817 /* PokerSwiftUIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4E6E10F122B3078B00A16817 /* PokerSwiftUIUITests.swift */,
+				4E6E10F322B3078B00A16817 /* Info.plist */,
+			);
+			path = PokerSwiftUIUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4E6E10CB22B3078900A16817 /* PokerSwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E6E10F622B3078B00A16817 /* Build configuration list for PBXNativeTarget "PokerSwiftUI" */;
+			buildPhases = (
+				4E6E10C822B3078900A16817 /* Sources */,
+				4E6E10C922B3078900A16817 /* Frameworks */,
+				4E6E10CA22B3078900A16817 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PokerSwiftUI;
+			productName = PokerSwiftUI;
+			productReference = 4E6E10CC22B3078900A16817 /* PokerSwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4E6E10E122B3078B00A16817 /* PokerSwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E6E10F922B3078B00A16817 /* Build configuration list for PBXNativeTarget "PokerSwiftUITests" */;
+			buildPhases = (
+				4E6E10DE22B3078B00A16817 /* Sources */,
+				4E6E10DF22B3078B00A16817 /* Frameworks */,
+				4E6E10E022B3078B00A16817 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E6E10E422B3078B00A16817 /* PBXTargetDependency */,
+			);
+			name = PokerSwiftUITests;
+			productName = PokerSwiftUITests;
+			productReference = 4E6E10E222B3078B00A16817 /* PokerSwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4E6E10EC22B3078B00A16817 /* PokerSwiftUIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E6E10FC22B3078B00A16817 /* Build configuration list for PBXNativeTarget "PokerSwiftUIUITests" */;
+			buildPhases = (
+				4E6E10E922B3078B00A16817 /* Sources */,
+				4E6E10EA22B3078B00A16817 /* Frameworks */,
+				4E6E10EB22B3078B00A16817 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E6E10EF22B3078B00A16817 /* PBXTargetDependency */,
+			);
+			name = PokerSwiftUIUITests;
+			productName = PokerSwiftUIUITests;
+			productReference = 4E6E10ED22B3078B00A16817 /* PokerSwiftUIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4E6E10C422B3078900A16817 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Kristopher Johnson";
+				TargetAttributes = {
+					4E6E10CB22B3078900A16817 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					4E6E10E122B3078B00A16817 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 4E6E10CB22B3078900A16817;
+					};
+					4E6E10EC22B3078B00A16817 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 4E6E10CB22B3078900A16817;
+					};
+				};
+			};
+			buildConfigurationList = 4E6E10C722B3078900A16817 /* Build configuration list for PBXProject "PokerSwiftUI" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4E6E10C322B3078900A16817;
+			productRefGroup = 4E6E10CD22B3078900A16817 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4E6E10CB22B3078900A16817 /* PokerSwiftUI */,
+				4E6E10E122B3078B00A16817 /* PokerSwiftUITests */,
+				4E6E10EC22B3078B00A16817 /* PokerSwiftUIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4E6E10CA22B3078900A16817 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E6E10DC22B3078B00A16817 /* LaunchScreen.storyboard in Resources */,
+				4E6E10D922B3078B00A16817 /* Preview Assets.xcassets in Resources */,
+				4E6E10D622B3078B00A16817 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E6E10E022B3078B00A16817 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E6E10EB22B3078B00A16817 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4E6E10C822B3078900A16817 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E6E10D022B3078900A16817 /* AppDelegate.swift in Sources */,
+				4E6E10D222B3078900A16817 /* SceneDelegate.swift in Sources */,
+				4E6E10D422B3078900A16817 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E6E10DE22B3078B00A16817 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E6E10E722B3078B00A16817 /* PokerSwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E6E10E922B3078B00A16817 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E6E10F222B3078B00A16817 /* PokerSwiftUIUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4E6E10E422B3078B00A16817 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E6E10CB22B3078900A16817 /* PokerSwiftUI */;
+			targetProxy = 4E6E10E322B3078B00A16817 /* PBXContainerItemProxy */;
+		};
+		4E6E10EF22B3078B00A16817 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E6E10CB22B3078900A16817 /* PokerSwiftUI */;
+			targetProxy = 4E6E10EE22B3078B00A16817 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4E6E10DA22B3078B00A16817 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E6E10DB22B3078B00A16817 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4E6E10F422B3078B00A16817 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4E6E10F522B3078B00A16817 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4E6E10F722B3078B00A16817 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "PokerSwiftUI/Preview\\ Content";
+				DEVELOPMENT_TEAM = D5E423632K;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = PokerSwiftUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.kristopherjohnson.PokerSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4E6E10F822B3078B00A16817 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "PokerSwiftUI/Preview\\ Content";
+				DEVELOPMENT_TEAM = D5E423632K;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = PokerSwiftUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.kristopherjohnson.PokerSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4E6E10FA22B3078B00A16817 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D5E423632K;
+				INFOPLIST_FILE = PokerSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.kristopherjohnson.PokerSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokerSwiftUI.app/PokerSwiftUI";
+			};
+			name = Debug;
+		};
+		4E6E10FB22B3078B00A16817 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D5E423632K;
+				INFOPLIST_FILE = PokerSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.kristopherjohnson.PokerSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokerSwiftUI.app/PokerSwiftUI";
+			};
+			name = Release;
+		};
+		4E6E10FD22B3078B00A16817 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D5E423632K;
+				INFOPLIST_FILE = PokerSwiftUIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.kristopherjohnson.PokerSwiftUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PokerSwiftUI;
+			};
+			name = Debug;
+		};
+		4E6E10FE22B3078B00A16817 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D5E423632K;
+				INFOPLIST_FILE = PokerSwiftUIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.kristopherjohnson.PokerSwiftUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PokerSwiftUI;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4E6E10C722B3078900A16817 /* Build configuration list for PBXProject "PokerSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E6E10F422B3078B00A16817 /* Debug */,
+				4E6E10F522B3078B00A16817 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E6E10F622B3078B00A16817 /* Build configuration list for PBXNativeTarget "PokerSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E6E10F722B3078B00A16817 /* Debug */,
+				4E6E10F822B3078B00A16817 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E6E10F922B3078B00A16817 /* Build configuration list for PBXNativeTarget "PokerSwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E6E10FA22B3078B00A16817 /* Debug */,
+				4E6E10FB22B3078B00A16817 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E6E10FC22B3078B00A16817 /* Build configuration list for PBXNativeTarget "PokerSwiftUIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E6E10FD22B3078B00A16817 /* Debug */,
+				4E6E10FE22B3078B00A16817 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4E6E10C422B3078900A16817 /* Project object */;
+}
