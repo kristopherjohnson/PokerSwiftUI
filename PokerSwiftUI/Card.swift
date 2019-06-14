@@ -13,6 +13,15 @@ enum Suit : CaseIterable {
     case diamonds
     case hearts
     case spades
+
+    var symbol: String {
+        switch self {
+        case .clubs:    return "\u{2663}"
+        case .diamonds: return "\u{2666}"
+        case .hearts:   return "\u{2665}"
+        case .spades:   return "\u{2660}"
+        }
+    }
 }
 
 enum Rank : CaseIterable {
@@ -29,6 +38,24 @@ enum Rank : CaseIterable {
     case jack
     case queen
     case king
+    
+    var symbol: String {
+        switch self {
+        case .ace:   return "A"
+        case .two:   return "2"
+        case .three: return "3"
+        case .four:  return "4"
+        case .five:  return "5"
+        case .six:   return "6"
+        case .seven: return "7"
+        case .eight: return "8"
+        case .nine:  return "9"
+        case .ten:   return "10"
+        case .jack:  return "J"
+        case .queen: return "Q"
+        case .king:  return "K"
+        }
+    }
 }
 
 struct Card {
@@ -40,5 +67,9 @@ struct Card {
         self.rank = rank
         self.suit = suit
         self.id = UUID()
+    }
+    
+    var symbol: String {
+        "\(rank.symbol)\(suit.symbol)"
     }
 }
