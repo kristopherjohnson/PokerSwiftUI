@@ -15,6 +15,7 @@
 		4E6E10DC22B3078B00A16817 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E6E10DA22B3078B00A16817 /* LaunchScreen.storyboard */; };
 		4E6E10E722B3078B00A16817 /* PokerSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E10E622B3078B00A16817 /* PokerSwiftUITests.swift */; };
 		4E6E10F222B3078B00A16817 /* PokerSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E10F122B3078B00A16817 /* PokerSwiftUIUITests.swift */; };
+		4E6E110022B309C400A16817 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E10FF22B309C400A16817 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		4E6E10ED22B3078B00A16817 /* PokerSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokerSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E6E10F122B3078B00A16817 /* PokerSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokerSwiftUIUITests.swift; sourceTree = "<group>"; };
 		4E6E10F322B3078B00A16817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E6E10FF22B309C400A16817 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				4E6E10CF22B3078900A16817 /* AppDelegate.swift */,
-				4E6E10D122B3078900A16817 /* SceneDelegate.swift */,
-				4E6E10D322B3078900A16817 /* ContentView.swift */,
 				4E6E10D522B3078B00A16817 /* Assets.xcassets */,
-				4E6E10DA22B3078B00A16817 /* LaunchScreen.storyboard */,
+				4E6E10FF22B309C400A16817 /* Card.swift */,
+				4E6E10D322B3078900A16817 /* ContentView.swift */,
 				4E6E10DD22B3078B00A16817 /* Info.plist */,
+				4E6E10DA22B3078B00A16817 /* LaunchScreen.storyboard */,
 				4E6E10D722B3078B00A16817 /* Preview Content */,
+				4E6E10D122B3078900A16817 /* SceneDelegate.swift */,
 			);
 			path = PokerSwiftUI;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				4E6E10D022B3078900A16817 /* AppDelegate.swift in Sources */,
 				4E6E10D222B3078900A16817 /* SceneDelegate.swift in Sources */,
 				4E6E10D422B3078900A16817 /* ContentView.swift in Sources */,
+				4E6E110022B309C400A16817 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
