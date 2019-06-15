@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Suit : CaseIterable {
+enum Suit : Int, CaseIterable {
     case clubs
     case diamonds
     case hearts
@@ -24,7 +24,7 @@ enum Suit : CaseIterable {
     }
 }
 
-enum Rank : CaseIterable {
+enum Rank : Int, CaseIterable {
     case ace
     case two
     case three
@@ -58,15 +58,15 @@ enum Rank : CaseIterable {
     }
 }
 
-struct Card {
+struct Card: Equatable {
     let rank: Rank
     let suit: Suit
-    let id: UUID
+    let id: Int
     
     init(_ rank: Rank, _ suit: Suit) {
         self.rank = rank
         self.suit = suit
-        self.id = UUID()
+        self.id = rank.rawValue + 100 * suit.rawValue
     }
     
     var symbol: String {

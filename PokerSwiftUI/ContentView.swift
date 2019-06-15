@@ -23,9 +23,9 @@ struct ContentView : View {
     
     @State var scoreLine = "Royal Straight"
     
-    @State var instructionsLine1 =
+    @State var instructionsTopLine =
         "Tap the cards you want to hold."
-    @State var instructionsLine2 =
+    @State var instructionsBottomLine =
         "Then tap the Draw button."
     
     @State var buttonTitle = "Draw"
@@ -71,8 +71,8 @@ struct ContentView : View {
                 Text(scoreLine)
                     .font(.headline)
                     .padding(.bottom)
-                Text(instructionsLine1)
-                Text(instructionsLine2)
+                Text(instructionsTopLine)
+                Text(instructionsBottomLine)
             }
             .padding(.bottom)
             
@@ -130,47 +130,6 @@ struct CardView : View {
             return .red
         default:
             return .black
-        }
-    }
-}
-
-struct PayoutsView : View {
-    var body: some View {
-        return VStack {
-            Text("Jacks-or-Better Payouts")
-                .font(.subheadline)
-                .padding(.bottom, 4)
-            HStack {
-                VStack {
-                    PayoutLine(score: .royalFlush)
-                    PayoutLine(score: .straightFlush)
-                    PayoutLine(score: .fourOfAKind)
-                    PayoutLine(score: .fullHouse)
-                    PayoutLine(score: .flush)
-                }
-                VStack {
-                    PayoutLine(score: .straight)
-                    PayoutLine(score: .threeOfAKind)
-                    PayoutLine(score: .twoPair)
-                    PayoutLine(score: .jacksOrBetter)
-                    Text(" ")
-                }
-            }
-            .frame(width: 270)
-            .font(.caption)
-            .allowsTightening(true)
-        }
-    }
-}
-
-struct PayoutLine : View {
-    let score: Score
-    
-    var body: some View {
-        return HStack {
-            Text(score.description)
-            Spacer()
-            Text((score.payout * 5).description)
         }
     }
 }

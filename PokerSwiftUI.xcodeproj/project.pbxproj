@@ -17,6 +17,10 @@
 		4E6E10F222B3078B00A16817 /* PokerSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E10F122B3078B00A16817 /* PokerSwiftUIUITests.swift */; };
 		4E6E110022B309C400A16817 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E10FF22B309C400A16817 /* Card.swift */; };
 		4EC0411922B44C1B00EC5FDF /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC0411822B44C1B00EC5FDF /* Score.swift */; };
+		4EC0411B22B5007C00EC5FDF /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC0411A22B5007C00EC5FDF /* Game.swift */; };
+		4EC0411D22B5071800EC5FDF /* PayoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC0411C22B5071800EC5FDF /* PayoutsView.swift */; };
+		4EC0411F22B5083000EC5FDF /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC0411E22B5083000EC5FDF /* Hand.swift */; };
+		4EC0412122B5093700EC5FDF /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC0412022B5093700EC5FDF /* Deck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		4E6E10F322B3078B00A16817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E6E10FF22B309C400A16817 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		4EC0411822B44C1B00EC5FDF /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		4EC0411A22B5007C00EC5FDF /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		4EC0411C22B5071800EC5FDF /* PayoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayoutsView.swift; sourceTree = "<group>"; };
+		4EC0411E22B5083000EC5FDF /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
+		4EC0412022B5093700EC5FDF /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +115,12 @@
 				4E6E10D522B3078B00A16817 /* Assets.xcassets */,
 				4E6E10FF22B309C400A16817 /* Card.swift */,
 				4E6E10D322B3078900A16817 /* ContentView.swift */,
+				4EC0412022B5093700EC5FDF /* Deck.swift */,
+				4EC0411A22B5007C00EC5FDF /* Game.swift */,
+				4EC0411E22B5083000EC5FDF /* Hand.swift */,
 				4E6E10DD22B3078B00A16817 /* Info.plist */,
 				4E6E10DA22B3078B00A16817 /* LaunchScreen.storyboard */,
+				4EC0411C22B5071800EC5FDF /* PayoutsView.swift */,
 				4E6E10D722B3078B00A16817 /* Preview Content */,
 				4E6E10D122B3078900A16817 /* SceneDelegate.swift */,
 				4EC0411822B44C1B00EC5FDF /* Score.swift */,
@@ -273,11 +285,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EC0412122B5093700EC5FDF /* Deck.swift in Sources */,
+				4EC0411F22B5083000EC5FDF /* Hand.swift in Sources */,
 				4E6E10D022B3078900A16817 /* AppDelegate.swift in Sources */,
+				4EC0411B22B5007C00EC5FDF /* Game.swift in Sources */,
 				4E6E10D222B3078900A16817 /* SceneDelegate.swift in Sources */,
 				4E6E10D422B3078900A16817 /* ContentView.swift in Sources */,
 				4E6E110022B309C400A16817 /* Card.swift in Sources */,
 				4EC0411922B44C1B00EC5FDF /* Score.swift in Sources */,
+				4EC0411D22B5071800EC5FDF /* PayoutsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

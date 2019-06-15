@@ -11,24 +11,29 @@ import XCTest
 
 class PokerSwiftUITests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    func testUnshuffledDeck() {
+        var deck = Deck(shuffled: false)
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+        XCTAssertEqual(deck.cards.count, 52)
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+        XCTAssertEqual(deck.cards[0], Card(.ace,.clubs))
+        XCTAssertEqual(deck.cards[1], Card(.two, .clubs))
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        XCTAssertEqual(deck.cards[50], Card(.queen, .spades))
+        XCTAssertEqual(deck.cards[51], Card(.king, .spades))
+        
+        if let firstDrawnCard = deck.drawCard() {
+            XCTAssertEqual(firstDrawnCard, Card(.king, .spades))
+        }
+        else {
+            XCTFail("drawCard failed")
+        }
+        
+        if let secondDrawnCard = deck.drawCard() {
+            XCTAssertEqual(secondDrawnCard, Card(.queen, .spades))
+        }
+        else {
+            XCTFail("drawCard failed")
         }
     }
-
 }
