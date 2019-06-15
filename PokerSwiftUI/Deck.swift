@@ -6,8 +6,6 @@
 //  Copyright © 2019 Kristopher Johnson. All rights reserved.
 //
 
-import Foundation
-
 struct Deck {
     var cards: [Card]
     

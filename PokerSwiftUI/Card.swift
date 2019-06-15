@@ -6,9 +6,7 @@
 //  Copyright © 2019 Kristopher Johnson. All rights reserved.
 //
 
-import Foundation
-
-enum Suit : Int, CaseIterable {
+enum Suit: Int8, CaseIterable {
     case clubs
     case diamonds
     case hearts
@@ -24,7 +22,7 @@ enum Suit : Int, CaseIterable {
     }
 }
 
-enum Rank : Int, CaseIterable {
+enum Rank: Int8, CaseIterable {
     case ace
     case two
     case three
@@ -61,12 +59,12 @@ enum Rank : Int, CaseIterable {
 struct Card: Equatable {
     let rank: Rank
     let suit: Suit
-    let id: Int
+    let id: Int8
     
     init(_ rank: Rank, _ suit: Suit) {
         self.rank = rank
         self.suit = suit
-        self.id = rank.rawValue + 100 * suit.rawValue
+        self.id = rank.rawValue + (suit.rawValue << 4)
     }
     
     var symbol: String {

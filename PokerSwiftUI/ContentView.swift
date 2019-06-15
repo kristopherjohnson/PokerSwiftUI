@@ -11,7 +11,7 @@ import SwiftUI
 extension Card : Identifiable {}
 
 struct ContentView : View {
-    @State var chipsRemaining: Int = 100
+    @State var chipsRemaining = 100
     
     @State var cards: [Card] = [
         Card(.ace,   .hearts),

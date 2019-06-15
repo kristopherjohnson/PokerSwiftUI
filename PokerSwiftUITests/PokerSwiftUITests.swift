@@ -14,7 +14,8 @@ class PokerSwiftUITests: XCTestCase {
     func testUnshuffledDeck() {
         var deck = Deck(shuffled: false)
 
-        XCTAssertEqual(deck.cards.count, 52)
+        XCTAssertEqual(deck.cards.count, 52,
+                       "Must be complete deck of 52 cards")
 
         XCTAssertEqual(deck.cards[0], Card(.ace,.clubs))
         XCTAssertEqual(deck.cards[1], Card(.two, .clubs))
@@ -35,5 +36,8 @@ class PokerSwiftUITests: XCTestCase {
         else {
             XCTFail("drawCard failed")
         }
+        
+        XCTAssertEqual(deck.cards.count, 50,
+                       "Count must be 50 after two cards drawn")
     }
 }
