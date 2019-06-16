@@ -1,12 +1,5 @@
-//
-//  Score.swift
-//  PokerSwiftUI
-//
-//  Created by Kristopher Johnson on 6/14/19.
-//  Copyright © 2019 Kristopher Johnson. All rights reserved.
-//
-
-enum Score {
+/// Loss or type of winning hand.
+enum Score : CustomStringConvertible {
     case loss
     case jacksOrBetter
     case twoPair
@@ -18,6 +11,7 @@ enum Score {
     case straightFlush
     case royalFlush
     
+    /// Payout per chip bet
     var payout: Int {
         switch self {
         case .loss:          return 0
@@ -32,9 +26,7 @@ enum Score {
         case .royalFlush:    return 800
         }
     }
-}
 
-extension Score: CustomStringConvertible {
     var description: String {
         switch self {
         case .loss:          return "Loss"

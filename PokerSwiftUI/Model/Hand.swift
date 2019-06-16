@@ -1,15 +1,8 @@
-//
-//  Hand.swift
-//  PokerSwiftUI
-//
-//  Created by Kristopher Johnson on 6/15/19.
-//  Copyright © 2019 Kristopher Johnson. All rights reserved.
-//
-
+/// The player's hand, consisting of five cards.
 struct Hand {
     let cards: [Card]
     let score: Score
-    
+
     init(cards: [Card]) {
         assert(cards.count == 5)
         self.cards = cards
@@ -23,14 +16,14 @@ private typealias SuitCounts = [Suit : Int]
 private func handScore(cards: [Card]) -> Score {
     var rankCounts = RankCounts()
     var suitCounts = SuitCounts()
-    
+
     for card in cards {
         rankCounts[card.rank, default: 0] += 1
         suitCounts[card.suit, default: 0] += 1
     }
-    
+
     let (isStraight, highRank) = hasStraight(rankCounts)
-    
+
     if isStraight {
         if hasFlush(suitCounts) {
             if highRank == .ace {
@@ -44,25 +37,25 @@ private func handScore(cards: [Card]) -> Score {
             return .straight
         }
     }
-    
+
     if hasFourOfAKind(rankCounts) {
         return .fourOfAKind
     }
-    
+
     if hasFlush(suitCounts) {
         return .flush
     }
-    
+
     if hasThreeOfAKind(rankCounts) {
         return hasPair(rankCounts)
             ? .fullHouse
             : .threeOfAKind
     }
-    
+
     if hasTwoPair(rankCounts) {
         return .twoPair
     }
-    
+
     if hasJacksOrBetterPair(rankCounts) {
         return .jacksOrBetter
     }
@@ -94,13 +87,13 @@ private func hasStraight(_ rankCounts: RankCounts) -> (Bool, Rank) {
     if rankCounts.contains(where: { $0.value > 1 }) {
         return (false, .ace)
     }
-    
+
     for possibleStraight in possibleStraights {
         if hasAllRanks(rankCounts, ranks: possibleStraight) {
             return (true, possibleStraight.last!)
         }
     }
-    
+
     return (false, .ace)
 }
 

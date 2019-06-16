@@ -1,11 +1,4 @@
-//
-//  Deck.swift
-//  PokerSwiftUI
-//
-//  Created by Kristopher Johnson on 6/15/19.
-//  Copyright © 2019 Kristopher Johnson. All rights reserved.
-//
-
+/// Deck of cards, usually shuffled, from which cards can be drawn.
 struct Deck {
     var cards: [Card]
     
@@ -23,6 +16,9 @@ struct Deck {
         self.cards = cards
     }
     
+    /// Remove and return the card from the top of the deck.
+    ///
+    /// Returns `none` if the deck is empty.
     mutating func drawCard() -> Card? {
         cards.popLast()
     }

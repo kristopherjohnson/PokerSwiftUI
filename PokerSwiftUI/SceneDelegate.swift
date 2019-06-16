@@ -1,11 +1,3 @@
-//
-//  SceneDelegate.swift
-//  PokerSwiftUI
-//
-//  Created by Kristopher Johnson on 6/13/19.
-//  Copyright © 2019 Kristopher Johnson. All rights reserved.
-//
-
 import UIKit
 import SwiftUI
 

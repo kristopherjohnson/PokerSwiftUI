@@ -1,13 +1,6 @@
-//
-//  PayoutsView.swift
-//  PokerSwiftUI
-//
-//  Created by Kristopher Johnson on 6/15/19.
-//  Copyright © 2019 Kristopher Johnson. All rights reserved.
-//
-
 import SwiftUI
 
+/// Displays a table of payouts for winning hands.
 struct PayoutsView : View {
     var body: some View {
         return VStack {
@@ -27,7 +20,7 @@ struct PayoutsView : View {
                     PayoutLine(score: .threeOfAKind)
                     PayoutLine(score: .twoPair)
                     PayoutLine(score: .jacksOrBetter)
-                    Text(" ")
+                    Text(" ") // TODO: Is there a better way to line everything up?
                 }
             }
             .frame(width: 270)
@@ -39,12 +32,13 @@ struct PayoutsView : View {
 
 struct PayoutLine : View {
     let score: Score
+    let chipsBet = 5
     
     var body: some View {
         return HStack {
             Text(score.description)
             Spacer()
-            Text((score.payout * 5).description)
+            Text((score.payout * chipsBet).description)
         }
     }
 }
