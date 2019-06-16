@@ -13,11 +13,11 @@ class ScoreTests: XCTestCase {
 
     func testLoss() {
         let cards = [
-            Card(.two, .clubs),
+            Card(.two,   .clubs),
             Card(.three, .clubs),
-            Card(.four, .clubs),
-            Card(.ten, .diamonds),
-            Card(.jack, .hearts),
+            Card(.four,  .clubs),
+            Card(.ten,   .diamonds),
+            Card(.jack,  .hearts),
         ]
         let hand = Hand(cards: cards)
         XCTAssertEqual(hand.score, .loss)
@@ -25,11 +25,11 @@ class ScoreTests: XCTestCase {
 
     func testJacksOrBetter() {
         let cards = [
-            Card(.two, .clubs),
-            Card(.jack, .diamonds),
+            Card(.two,   .clubs),
+            Card(.jack,  .diamonds),
             Card(.three, .clubs),
-            Card(.four, .clubs),
-            Card(.jack, .hearts),
+            Card(.four,  .clubs),
+            Card(.jack,  .hearts),
         ]
         let hand = Hand(cards: cards)
         XCTAssertEqual(hand.score, .jacksOrBetter)
@@ -37,9 +37,9 @@ class ScoreTests: XCTestCase {
 
     func testLowPair() {
         let cards = [
-            Card(.two, .clubs),
+            Card(.two,  .clubs),
             Card(.jack, .diamonds),
-            Card(.two, .clubs),
+            Card(.two,  .clubs),
             Card(.four, .clubs),
             Card(.king, .hearts),
         ]
@@ -49,9 +49,9 @@ class ScoreTests: XCTestCase {
     
     func testTwoPair() {
         let cards = [
-            Card(.two, .clubs),
+            Card(.two,  .clubs),
             Card(.king, .diamonds),
-            Card(.two, .clubs),
+            Card(.two,  .clubs),
             Card(.four, .clubs),
             Card(.king, .hearts),
         ]
@@ -61,11 +61,11 @@ class ScoreTests: XCTestCase {
     
     func testThreeOfAKind() {
         let cards = [
-            Card(.two, .clubs),
+            Card(.two,  .clubs),
             Card(.king, .diamonds),
-            Card(.two, .clubs),
+            Card(.two,  .clubs),
             Card(.four, .clubs),
-            Card(.two, .hearts),
+            Card(.two,  .hearts),
         ]
         let hand = Hand(cards: cards)
         XCTAssertEqual(hand.score, .threeOfAKind)
@@ -74,9 +74,9 @@ class ScoreTests: XCTestCase {
     func testStraight() {
         let cards = [
             Card(.three, .clubs),
-            Card(.six, .hearts),
-            Card(.five, .hearts),
-            Card(.four, .diamonds),
+            Card(.six,   .hearts),
+            Card(.five,  .hearts),
+            Card(.four,  .diamonds),
             Card(.seven, .hearts),
         ]
         let hand = Hand(cards: cards)
@@ -85,11 +85,11 @@ class ScoreTests: XCTestCase {
     
     func testFlush() {
         let cards = [
-            Card(.two, .hearts),
-            Card(.king, .hearts),
+            Card(.two,   .hearts),
+            Card(.king,  .hearts),
             Card(.eight, .hearts),
-            Card(.four, .hearts),
-            Card(.nine, .hearts),
+            Card(.four,  .hearts),
+            Card(.nine,  .hearts),
         ]
         let hand = Hand(cards: cards)
         XCTAssertEqual(hand.score, .flush)
@@ -97,10 +97,10 @@ class ScoreTests: XCTestCase {
     
     func testFullHouse() {
         let cards = [
-            Card(.two, .hearts),
+            Card(.two,   .hearts),
             Card(.queen, .hearts),
-            Card(.two, .clubs),
-            Card(.two, .spades),
+            Card(.two,   .clubs),
+            Card(.two,   .spades),
             Card(.queen, .diamonds),
         ]
         let hand = Hand(cards: cards)
@@ -109,10 +109,10 @@ class ScoreTests: XCTestCase {
     
     func testFourOfAKind() {
         let cards = [
-            Card(.two, .hearts),
-            Card(.two, .diamonds),
-            Card(.two, .clubs),
-            Card(.two, .spades),
+            Card(.two,   .hearts),
+            Card(.two,   .diamonds),
+            Card(.two,   .clubs),
+            Card(.two,   .spades),
             Card(.queen, .diamonds),
         ]
         let hand = Hand(cards: cards)
@@ -121,11 +121,11 @@ class ScoreTests: XCTestCase {
 
     func testStraightFlush() {
         let cards = [
-            Card(.ace, .hearts),
-            Card(.five, .hearts),
+            Card(.ace,   .hearts),
+            Card(.five,  .hearts),
             Card(.three, .hearts),
-            Card(.four, .hearts),
-            Card(.two, .hearts),
+            Card(.four,  .hearts),
+            Card(.two,   .hearts),
         ]
         let hand = Hand(cards: cards)
         XCTAssertEqual(hand.score, .straightFlush)
@@ -133,10 +133,10 @@ class ScoreTests: XCTestCase {
 
     func testRoyalFlush() {
         let cards = [
-            Card(.ace, .spades),
-            Card(.king, .spades),
-            Card(.jack, .spades),
-            Card(.ten, .spades),
+            Card(.ace,   .spades),
+            Card(.king,  .spades),
+            Card(.jack,  .spades),
+            Card(.ten,   .spades),
             Card(.queen, .spades),
         ]
         let hand = Hand(cards: cards)

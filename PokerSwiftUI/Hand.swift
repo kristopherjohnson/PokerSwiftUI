@@ -17,8 +17,8 @@ struct Hand {
     }
 }
 
-typealias RankCounts = [Rank : Int]
-typealias SuitCounts = [Suit : Int]
+private typealias RankCounts = [Rank : Int]
+private typealias SuitCounts = [Suit : Int]
 
 private func handScore(cards: [Card]) -> Score {
     var rankCounts = RankCounts()
@@ -70,7 +70,9 @@ private func handScore(cards: [Card]) -> Score {
     return .loss
 }
 
-let faceRanks: [Rank] = [.jack, .queen, .king, .ace]
+private let faceRanks: [Rank] = [
+    .jack, .queen, .king, .ace
+]
 
 let possibleStraights: [[Rank]] = [
     [.ace,   .two,   .three, .four,  .five],
