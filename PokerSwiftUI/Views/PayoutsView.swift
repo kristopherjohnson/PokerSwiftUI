@@ -3,9 +3,8 @@ import SwiftUI
 /// Displays a table of payouts for winning hands.
 struct PayoutsView : View {
     var body: some View {
-        return VStack {
-            Text("Jacks-or-Better Payouts")
-                .font(.subheadline)
+        VStack {
+            Text("Payouts")
                 .padding(.bottom, 4)
             HStack {
                 VStack {
@@ -24,21 +23,21 @@ struct PayoutsView : View {
                 }
             }
             .frame(width: 270)
-            .font(.caption)
             .allowsTightening(true)
         }
+        .font(Font.system(size: 13))
     }
 }
 
 struct PayoutLine : View {
     let score: Score
-    let chipsBet = 5
     
     var body: some View {
         return HStack {
             Text(score.description)
             Spacer()
-            Text((score.payout * chipsBet).description)
+            Text(score.payout.description)
+                .layoutPriority(1)
         }
     }
 }

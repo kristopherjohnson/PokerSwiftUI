@@ -1,8 +1,8 @@
 enum GameState {
     case newGame
-    case newHand
+    case afterDeal
     case afterDraw
-    case outOfChips
+    case outOfCredits
 }
 
 class Game {

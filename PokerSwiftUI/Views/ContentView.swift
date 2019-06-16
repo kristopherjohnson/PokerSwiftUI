@@ -3,7 +3,7 @@ import SwiftUI
 extension Card : Identifiable {}
 
 struct ContentView : View {
-    @State var chipsRemaining = 100
+    @State var creditsRemaining = 100
     
     @State var cards: [Card] = [
         Card(.ace,   .hearts),
@@ -28,12 +28,12 @@ struct ContentView : View {
             
             PayoutsView()
                 .padding()
-                .background(Color(red: 0.0, green: 0.3, blue: 0.0),
+                .background(Color(red: 0.0, green: 0.35, blue: 0.0),
                             cornerRadius: 20)
             
             HStack {
-                Text("Chips Remaining:")
-                Text(chipsRemaining.description)
+                Text("Credits Remaining:")
+                Text(creditsRemaining.description)
                     .color(.yellow)
                     .fontWeight(.bold)
             }
@@ -41,7 +41,7 @@ struct ContentView : View {
             
             HStack {
                 Spacer()
-                HStack(spacing: 8) {
+                HStack(spacing: 7) {
                     ForEach(cards) { card in
                         VStack {
                             Button(action: {
@@ -92,6 +92,7 @@ struct ContentView : View {
     }
 }
 
+/// Displays a card's rank and suit in a card-shaped rounded rectangle.
 struct CardView : View {
     let card: Card
     
@@ -100,7 +101,7 @@ struct CardView : View {
             HStack {
                 Text(card.rank.symbol)
                     .color(suitColor)
-                    .font(.title)
+                    .font(Font.system(size: 30))
                     .fontWeight(.bold)
                 Spacer()
             }
@@ -108,11 +109,11 @@ struct CardView : View {
                 Spacer()
                 Text(card.suit.symbol)
                     .color(suitColor)
-                    .font(.largeTitle)
+                    .font(Font.system(size: 36))
             }
         }
         .padding(.all, 4)
-        .frame(width: 54)
+        .frame(width: 56)
         .background(Color.white, cornerRadius: 4)
     }
     
@@ -136,7 +137,7 @@ struct ContentView_Previews : PreviewProvider {
             Card(.queen, .spades),
             Card(.king,  .hearts),
         ]
-        return ContentView(chipsRemaining: 100,
+        return ContentView(creditsRemaining: 100,
                            cards: cards)
     }
 }

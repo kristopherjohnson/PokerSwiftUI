@@ -19,11 +19,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PokerSwiftUI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXw-pc-bfE">
                                 <rect key="frame" x="123.5" y="430" width="167" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <color key="textColor" cocoaTouchSystemColor="systemGreenColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.40428543090000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="TXw-pc-bfE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="A0q-Q6-kzr"/>
                             <constraint firstItem="TXw-pc-bfE" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="cx1-ES-OLB"/>

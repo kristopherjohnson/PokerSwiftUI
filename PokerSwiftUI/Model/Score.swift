@@ -1,3 +1,8 @@
+/// Hard-coded number of credits per bet.
+///
+/// In the future, this may be something the player can choose.
+let creditsPerBet = 5
+
 /// Loss or type of winning hand.
 enum Score : CustomStringConvertible {
     case loss
@@ -14,23 +19,23 @@ enum Score : CustomStringConvertible {
     /// Payout per chip bet
     var payout: Int {
         switch self {
-        case .loss:          return 0
-        case .jacksOrBetter: return 1
-        case .twoPair:       return 2
-        case .threeOfAKind:  return 3
-        case .straight:      return 4
-        case .flush:         return 6
-        case .fullHouse:     return 9
-        case .fourOfAKind:   return 25
-        case .straightFlush: return 50
-        case .royalFlush:    return 800
+        case .loss:          return creditsPerBet * 0
+        case .jacksOrBetter: return creditsPerBet * 1
+        case .twoPair:       return creditsPerBet * 2
+        case .threeOfAKind:  return creditsPerBet * 3
+        case .straight:      return creditsPerBet * 4
+        case .flush:         return creditsPerBet * 6
+        case .fullHouse:     return creditsPerBet * 9
+        case .fourOfAKind:   return creditsPerBet * 25
+        case .straightFlush: return creditsPerBet * 50
+        case .royalFlush:    return creditsPerBet * 800
         }
     }
 
     var description: String {
         switch self {
         case .loss:          return "Loss"
-        case .jacksOrBetter: return "Pair"
+        case .jacksOrBetter: return "Jacks or Better"
         case .twoPair:       return "Two Pair"
         case .threeOfAKind:  return "Three of a Kind"
         case .straight:      return "Straight"
