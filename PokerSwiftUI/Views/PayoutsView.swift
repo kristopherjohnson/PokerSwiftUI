@@ -6,7 +6,7 @@ struct PayoutsView : View {
         VStack {
             Text("Payouts")
                 .padding(.bottom, 4)
-            HStack {
+            HStack(alignment: .top) {
                 VStack {
                     PayoutLine(score: .royalFlush)
                     PayoutLine(score: .straightFlush)
@@ -14,13 +14,14 @@ struct PayoutsView : View {
                     PayoutLine(score: .fullHouse)
                     PayoutLine(score: .flush)
                 }
+                .padding([.trailing], 3)
                 VStack {
                     PayoutLine(score: .straight)
                     PayoutLine(score: .threeOfAKind)
                     PayoutLine(score: .twoPair)
                     PayoutLine(score: .jacksOrBetter)
-                    Text(" ") // TODO: Is there a better way to line everything up?
                 }
+                .padding([.leading], 3)
             }
             .frame(width: 270)
             .allowsTightening(true)
