@@ -28,7 +28,7 @@ struct ContentView : View {
             
             PayoutsView()
                 .padding()
-                .background(Color(red: 0.0, green: 0.35, blue: 0.0),
+                .background(Color(red: 0.0, green: 0.3, blue: 0.3),
                             cornerRadius: 20)
             
             HStack {
@@ -73,11 +73,12 @@ struct ContentView : View {
                     .font(.largeTitle)
             }
             .padding()
-            .background(Color.green, cornerRadius: 8)
+            .background(Color.green,
+                        cornerRadius: 8)
             
             Spacer()
         }
-        .background(Color(red: 0.0, green: 0.4, blue: 0.0))
+        .background(Color(red: 0.0, green: 0.35, blue: 0.35))
         .foregroundColor(Color.white)
         .accentColor(.green)
         .edgesIgnoringSafeArea(.all)
