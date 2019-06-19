@@ -3,24 +3,7 @@ import SwiftUI
 extension Card : Identifiable {}
 
 struct ContentView : View {
-    @State var creditsRemaining = 100
-    
-    @State var cards: [Card] = [
-        Card(.ace,   .hearts),
-        Card(.ten,   .clubs),
-        Card(.jack,  .diamonds),
-        Card(.queen, .spades),
-        Card(.king,  .hearts),
-    ]
-    
-    @State var scoreLine = "Royal Straight"
-    
-    @State var instructionsTopLine =
-        "Tap the cards you want to hold."
-    @State var instructionsBottomLine =
-        "Then tap the Draw button."
-    
-    @State var buttonTitle = "Draw"
+    @ObjectBinding var model = Game()
     
     var body: some View {
         VStack {
@@ -33,7 +16,7 @@ struct ContentView : View {
             
             HStack {
                 Text("Credits Remaining:")
-                Text(creditsRemaining.description)
+                Text(model.creditsRemaining.description)
                     .color(.yellow)
                     .fontWeight(.bold)
             }
@@ -42,7 +25,7 @@ struct ContentView : View {
             HStack {
                 Spacer()
                 HStack(spacing: 7) {
-                    ForEach(cards) { card in
+                    ForEach(model.hand.cards) { card in
                         VStack {
                             Button(action: {
                                 self.onTap(card: card)
@@ -82,6 +65,30 @@ struct ContentView : View {
         .foregroundColor(Color.white)
         .accentColor(.green)
         .edgesIgnoringSafeArea(.all)
+    }
+    
+    /// Text displayed below the cards.
+    private var scoreLine: String {
+        let score = model.hand.score
+        switch score {
+        case .loss: return " "
+        default: return score.description
+        }
+    }
+    
+    /// Top line of instructions displayed above the button
+    private var instructionsTopLine: String {
+        "Tap the cards you want to hold."
+    }
+    
+    /// Bottom line of instructions displayed above the button
+    private var instructionsBottomLine: String {
+        "Then tap the Draw button."
+    }
+    
+    /// Title of the action button
+    private var buttonTitle: String {
+        "Draw"
     }
     
     private func onTap(card: Card) {
@@ -131,15 +138,7 @@ struct CardView : View {
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        let cards: [Card] = [
-            Card(.ace,   .hearts),
-            Card(.ten,   .clubs),
-            Card(.jack,  .diamonds),
-            Card(.queen, .spades),
-            Card(.king,  .hearts),
-        ]
-        return ContentView(creditsRemaining: 100,
-                           cards: cards)
+        return ContentView()
     }
 }
 #endif
