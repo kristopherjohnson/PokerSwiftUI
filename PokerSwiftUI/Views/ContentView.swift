@@ -28,7 +28,9 @@ struct ContentView : View {
                     ForEach(model.hand.cards) { card in
                         VStack {
                             Button(action: {
-                                self.model.onTap(card: card)
+                                withAnimation {
+                                    self.model.onTap(card: card)
+                                }
                             }) {
                                 CardView(card: card)
                                 Text(self.model.heldCards.contains(card) ? "HOLD" : " ")
@@ -52,7 +54,9 @@ struct ContentView : View {
             .padding(.bottom)
             
             Button(action: {
-                self.model.onTapActionButton()
+                withAnimation {
+                    self.model.onTapActionButton()
+                }
             }) {
                 Text(model.actionButtonTitle)
                     .font(.largeTitle)
