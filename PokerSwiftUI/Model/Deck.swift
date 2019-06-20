@@ -22,4 +22,14 @@ struct Deck {
     mutating func drawCard() -> Card? {
         cards.popLast()
     }
+    
+    /// Deal a hand of five cards
+    mutating func dealHand() -> Hand {
+        assert(cards.count >= 5)
+        var handCards = [Card]()
+        for _ in 0..<cardsPerHand {
+            handCards.append(drawCard()!)
+        }
+        return Hand(cards: handCards)
+    }
 }

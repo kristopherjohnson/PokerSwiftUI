@@ -20,7 +20,7 @@ struct ContentView : View {
                     .color(.yellow)
                     .fontWeight(.bold)
             }
-            .padding(.top)
+            //.padding(.top)
             
             HStack {
                 Spacer()
@@ -28,7 +28,7 @@ struct ContentView : View {
                     ForEach(model.hand.cards) { card in
                         VStack {
                             Button(action: {
-                                self.onTap(card: card)
+                                self.model.onTap(card: card)
                             }) {
                                 CardView(card: card)
                                 Text("HOLD")
@@ -43,18 +43,21 @@ struct ContentView : View {
             .padding()
             
             VStack {
-                Text(scoreLine)
+                Text(model.scoreLine)
                     .font(.headline)
                     .padding(.bottom)
-                Text(instructionsTopLine)
-                Text(instructionsBottomLine)
+                Text(model.instructionsTopLine)
+                Text(model.instructionsBottomLine)
             }
             .padding(.bottom)
             
-            Button(action: onTapActionButton) {
-                Text(buttonTitle)
+            Button(action: {
+                self.model.onTapActionButton()
+            }) {
+                Text(model.actionButtonTitle)
                     .font(.largeTitle)
             }
+            .frame(width: 130)
             .padding()
             .background(Color.green,
                         cornerRadius: 8)
@@ -65,39 +68,7 @@ struct ContentView : View {
         .foregroundColor(Color.white)
         .accentColor(.green)
         .edgesIgnoringSafeArea(.all)
-    }
-    
-    /// Text displayed below the cards.
-    private var scoreLine: String {
-        let score = model.hand.score
-        switch score {
-        case .loss: return " "
-        default: return score.description
-        }
-    }
-    
-    /// Top line of instructions displayed above the button
-    private var instructionsTopLine: String {
-        "Tap the cards you want to hold."
-    }
-    
-    /// Bottom line of instructions displayed above the button
-    private var instructionsBottomLine: String {
-        "Then tap the Draw button."
-    }
-    
-    /// Title of the action button
-    private var buttonTitle: String {
-        "Draw"
-    }
-    
-    private func onTap(card: Card) {
-        // TODO
-    }
-    
-    private func onTapActionButton() {
-        // TODO
-    }
+    }    
 }
 
 /// Displays a card's rank and suit in a card-shaped rounded rectangle.

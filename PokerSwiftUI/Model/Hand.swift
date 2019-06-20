@@ -1,10 +1,12 @@
+let cardsPerHand = 5
+
 /// The player's hand, consisting of five cards.
 struct Hand {
     let cards: [Card]
     let score: Score
 
     init(cards: [Card]) {
-        assert(cards.count == 5)
+        assert(cards.count == cardsPerHand)
         self.cards = cards
         self.score = handScore(cards: cards)
     }
