@@ -1,5 +1,5 @@
 /// Representation of a playing card
-struct Card: Equatable, CustomStringConvertible {
+struct Card: Equatable, Hashable, CustomStringConvertible {
     let rank: Rank
     let suit: Suit
     

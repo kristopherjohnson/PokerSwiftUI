@@ -1,13 +1,6 @@
 import Combine
 import SwiftUI
 
-enum GameState {
-    case newGame
-    case afterDeal
-    case afterDraw
-    case outOfCredits
-}
-
 /// Cards displayed before a game starts.
 private let attractModeCards: [Card] = [
     Card(.ace, .hearts),
@@ -20,11 +13,19 @@ private let attractModeCards: [Card] = [
 /// The model for the state of the poker game.
 class Game: BindableObject {
     
+    enum GameState {
+        case newGame
+        case afterDeal
+        case afterDraw
+        case outOfCredits
+    }
+    
     private(set) var didChange = PassthroughSubject<Game, Never>()
     
     private(set) var state: GameState
     private(set) var creditsRemaining: Int
     private(set) var hand: Hand
+    private(set) var heldCards: Set<Card>
     private(set) var deck: Deck
     
     /// Text displayed below the cards.
@@ -95,10 +96,20 @@ class Game: BindableObject {
         creditsRemaining = 100
         hand = Hand(cards: attractModeCards)
         deck = Deck(shuffled: false)
+        heldCards = []
     }
     
     func onTap(card: Card) {
-        // TODO
+        if state == .afterDeal {
+            if heldCards.contains(card) {
+                heldCards.remove(card)
+            }
+            else {
+                heldCards.insert(card)
+            }
+            
+            didChange.send(self)
+        }
     }
     
     func onTapActionButton() {
@@ -124,11 +135,22 @@ class Game: BindableObject {
         creditsRemaining -= creditsPerBet
         deck = Deck(shuffled: true)
         hand = deck.dealHand()
+        heldCards = []
         state = .afterDeal
     }
     
     private func draw() {
-        // TODO: draw cards
+        var cardsAfterDraw = [Card]()
+        cardsAfterDraw.reserveCapacity(cardsPerHand)
+        for i in 0..<cardsPerHand {
+            if heldCards.contains(hand.cards[i]) {
+                cardsAfterDraw.append(hand.cards[i])
+            }
+            else {
+                cardsAfterDraw.append(deck.drawCard()!)
+            }
+        }
+        hand = Hand(cards: cardsAfterDraw)
         
         creditsRemaining += hand.score.payout
         state = (creditsRemaining == 0) ? .outOfCredits : .afterDraw

@@ -20,7 +20,7 @@ struct ContentView : View {
                     .color(.yellow)
                     .fontWeight(.bold)
             }
-            //.padding(.top)
+            .padding(.top)
             
             HStack {
                 Spacer()
@@ -31,7 +31,7 @@ struct ContentView : View {
                                 self.model.onTap(card: card)
                             }) {
                                 CardView(card: card)
-                                Text("HOLD")
+                                Text(self.model.heldCards.contains(card) ? "HOLD" : " ")
                                     .fontWeight(.bold)
                                     .color(.yellow)
                             }
