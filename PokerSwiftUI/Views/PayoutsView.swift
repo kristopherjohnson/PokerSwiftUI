@@ -5,7 +5,7 @@ struct PayoutsView : View {
     var body: some View {
         VStack {
             Text("Payouts")
-                .fontWeight(.bold)
+                .bold()
                 .padding(.bottom, 4)
             HStack(alignment: .top) {
                 VStack {
@@ -26,8 +26,8 @@ struct PayoutsView : View {
             }
             .frame(width: 270)
             .allowsTightening(true)
+            .font(Font.custom("Futura", size: 13))
         }
-        .font(Font.custom("Futura", size: 13))
     }
 }
 
