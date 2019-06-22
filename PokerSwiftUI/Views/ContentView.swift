@@ -2,6 +2,7 @@ import SwiftUI
 
 extension Card : Identifiable {}
 
+/// Main view for the app.
 struct ContentView : View {
     @ObjectBinding var model = Game()
     
@@ -11,14 +12,14 @@ struct ContentView : View {
             
             PayoutsView()
                 .padding()
-                .background(Color(red: 0.0, green: 0.3, blue: 0.3),
+                .background(payoutsBackgroundColor,
                             cornerRadius: 20)
             
             HStack {
                 Text("Credits Remaining:")
                 Text(model.creditsRemaining.description)
-                    .color(.yellow)
-                    .fontWeight(.bold)
+                    .color(creditsRemainingColor)
+                    .bold()
             }
             .padding(.top)
             
@@ -26,18 +27,22 @@ struct ContentView : View {
                 Spacer()
                 HStack(spacing: 7) {
                     ForEach(model.hand.cards) { card in
-                        VStack {
-                            Button(action: {
-                                withAnimation {
-                                    self.model.onTap(card: card)
-                                }
-                            }) {
+                        Button(action: {
+                            withAnimation {
+                                self.model.onTap(card: card)
+                            }
+                        }) {
+                            ZStack {
                                 CardView(card: card)
-                                Text(self.model.heldCards.contains(card) ? "HOLD" : " ")
-                                    .fontWeight(.bold)
-                                    .color(.yellow)
+                                
+                                if self.model.heldCards.contains(card) {
+                                    HoldMarker(color: self.holdMarkerShadowColor)
+                                        .offset(y: 3)
+                                    HoldMarker(color: self.holdMarkerColor)
+                                }
                             }
                         }
+                        .disabled(!self.model.isTapCardEnabled)
                     }
                 }
                 Spacer()
@@ -63,16 +68,48 @@ struct ContentView : View {
             }
             .frame(width: 130)
             .padding()
-            .background(Color.green,
+            .background(actionButtonColor,
                         cornerRadius: 8)
             
             Spacer()
         }
-        .background(Color(red: 0.0, green: 0.35, blue: 0.35))
-        .foregroundColor(Color.white)
-        .accentColor(.green)
+        .background(viewBackgroundColor)
+        .foregroundColor(viewForegroundColor)
+        .accentColor(viewAccentColor)
         .edgesIgnoringSafeArea(.all)
-    }    
+    }
+    
+    private var viewBackgroundColor: Color {
+        Color(red: 0.0, green: 0.35, blue: 0.35)
+    }
+    
+    private var viewForegroundColor: Color {
+        Color.white
+    }
+    
+    private var viewAccentColor: Color {
+        Color.green
+    }
+    
+    private var actionButtonColor: Color {
+        Color(red:0, green:0.7, blue:0.7)
+    }
+    
+    private var holdMarkerColor: Color {
+        Color.yellow
+    }
+    
+    private var holdMarkerShadowColor: Color {
+        Color(white: 0.0, opacity: 0.75)
+    }
+    
+    private var payoutsBackgroundColor: Color {
+        Color(red: 0.0, green: 0.3, blue: 0.3)
+    }
+    
+    private var creditsRemainingColor: Color {
+        Color.yellow
+    }
 }
 
 /// Displays a card's rank and suit in a card-shaped rounded rectangle.
@@ -85,7 +122,7 @@ struct CardView : View {
                 Text(card.rank.symbol)
                     .color(suitColor)
                     .font(Font.system(size: 30))
-                    .fontWeight(.bold)
+                    .bold()
                 Spacer()
             }
             HStack {
@@ -107,6 +144,17 @@ struct CardView : View {
         default:
             return .black
         }
+    }
+}
+
+struct HoldMarker : View {
+    let color: Color
+    var body: some View {
+        Text("HOLD")
+            .color(color)
+            .font(Font.custom("Futura-CondensedExtraBold", size: 20))
+            .rotationEffect(Angle(degrees: -35))
+            .scaleEffect(Length(1.6))
     }
 }
 

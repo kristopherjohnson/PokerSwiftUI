@@ -91,6 +91,11 @@ class Game: BindableObject {
         }
     }
     
+    /// `true` if tapping card to select is enabled
+    var isTapCardEnabled: Bool {
+        state == .afterDeal
+    }
+    
     init() {
         state = .newGame
         creditsRemaining = 100
