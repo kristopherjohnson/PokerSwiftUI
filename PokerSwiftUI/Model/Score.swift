@@ -35,7 +35,7 @@ enum Score : CustomStringConvertible {
     var description: String {
         switch self {
         case .loss:          return "Loss"
-        case .jacksOrBetter: return "Jacks or Better"
+        case .jacksOrBetter: return "High Pair"
         case .twoPair:       return "Two Pair"
         case .threeOfAKind:  return "Three of a Kind"
         case .straight:      return "Straight"

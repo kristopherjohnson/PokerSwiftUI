@@ -4,9 +4,10 @@ import SwiftUI
 struct PayoutsView : View {
     var body: some View {
         VStack {
-            Text("Payouts")
-                .bold()
+            Text("5 credits per bet")
+                .font(Font.custom("Futura", size: 13))
                 .padding(.bottom, 4)
+
             HStack(alignment: .top) {
                 VStack {
                     PayoutLine(score: .royalFlush)
@@ -36,11 +37,17 @@ struct PayoutLine : View {
     
     var body: some View {
         return HStack {
-            Text(score.description)
+            Text(score.payoutTableDescription)
             Spacer()
             Text(score.payout.description)
                 .layoutPriority(1)
         }
+    }
+}
+
+extension Score {
+    var payoutTableDescription: String {
+        self == .jacksOrBetter ? "Jacks or Better" : self.description
     }
 }
 

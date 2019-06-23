@@ -15,40 +15,51 @@ struct ContentView : View {
                 .background(payoutsBackgroundColor,
                             cornerRadius: 20)
             
-            HStack {
-                Text("Credits Remaining:")
-                Text(model.creditsRemaining.description)
-                    .color(creditsRemainingColor)
-                    .bold()
+            if model.state != .newGame {
+                HStack {
+                    Text("Credits Remaining:")
+                    Text(model.creditsRemaining.description)
+                        .color(creditsRemainingColor)
+                        .bold()
+                }
+                .padding(.top)
             }
-            .padding(.top)
             
             HStack {
                 Spacer()
-                HStack(spacing: 7) {
-                    ForEach(model.hand.cards) { card in
-                        Button(action: {
-                            withAnimation {
-                                self.model.onTap(card: card)
-                            }
-                        }) {
-                            ZStack {
-                                CardView(card: card)
-                                
-                                if self.model.heldCards.contains(card) {
-                                    HoldMarker(color: self.holdMarkerShadowColor)
-                                        .offset(y: 3)
-                                    HoldMarker(color: self.holdMarkerColor)
+                if model.state == .newGame {
+                    Text("Jacks or Better Poker")
+                        .font(.largeTitle)
+                        .color(.yellow)
+                }
+                else {
+                    HStack(spacing: 7) {
+                        ForEach(model.hand.cards) { card in
+                            Button(action: {
+                                withAnimation {
+                                    self.model.onTap(card: card)
+                                }
+                            }) {
+                                ZStack {
+                                    CardView(card: card)
+                                    
+                                    if self.model.heldCards.contains(card) {
+                                        HoldMarker(color: self.holdMarkerShadowColor)
+                                            .offset(y: 3)
+                                            .opacity(self.holdOpacity * 0.7)
+                                        HoldMarker(color: self.holdMarkerColor)
+                                            .opacity(self.holdOpacity)
+                                    }
                                 }
                             }
+                            .disabled(!self.model.isTapCardEnabled)
                         }
-                        .disabled(!self.model.isTapCardEnabled)
                     }
                 }
                 Spacer()
             }
             .padding()
-            
+
             VStack {
                 Text(model.scoreLine)
                     .font(.headline)
@@ -109,6 +120,10 @@ struct ContentView : View {
     
     private var creditsRemainingColor: Color {
         Color.yellow
+    }
+    
+    private var holdOpacity: Double {
+        self.model.state == .afterDeal ? 1.0 : 0.3
     }
 }
 

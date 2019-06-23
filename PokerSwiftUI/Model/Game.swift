@@ -131,17 +131,17 @@ class Game: BindableObject {
     }
 
     private func newGame() {
+        state = .newGame
         creditsRemaining = 100
         hand = Hand(cards: attractModeCards)
-        state = .newGame
     }
     
     private func deal() {
+        state = .afterDeal
         creditsRemaining -= creditsPerBet
         deck = Deck(shuffled: true)
         hand = deck.dealHand()
         heldCards = []
-        state = .afterDeal
     }
     
     private func draw() {
@@ -156,8 +156,8 @@ class Game: BindableObject {
             }
         }
         hand = Hand(cards: cardsAfterDraw)
-        
+
         creditsRemaining += hand.score.payout
-        state = (creditsRemaining == 0) ? .outOfCredits : .afterDraw
+        state = (creditsRemaining == 0) ? .outOfCredits : .afterDraw        
     }
 }
