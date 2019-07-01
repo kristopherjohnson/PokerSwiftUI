@@ -76,11 +76,11 @@ struct ContentView : View {
             }) {
                 Text(model.actionButtonTitle)
                     .font(.largeTitle)
+                    .padding()
+                    .frame(width: 130)
+                    .background(actionButtonColor,
+                                cornerRadius: 8)
             }
-            .frame(width: 130)
-            .padding()
-            .background(actionButtonColor,
-                        cornerRadius: 8)
             
             Spacer()
         }
