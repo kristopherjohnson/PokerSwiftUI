@@ -19,7 +19,7 @@ struct ContentView : View {
                 HStack {
                     Text("Credits Remaining:")
                     Text(model.creditsRemaining.description)
-                        .color(creditsRemainingColor)
+                        .foregroundColor(creditsRemainingColor)
                         .bold()
                 }
                 .padding(.top)
@@ -30,7 +30,7 @@ struct ContentView : View {
                 if model.state == .newGame {
                     Text("Jacks or Better Poker")
                         .font(.largeTitle)
-                        .color(.yellow)
+                        .foregroundColor(.yellow)
                 }
                 else {
                     HStack(spacing: 7) {
@@ -135,7 +135,7 @@ struct CardView : View {
         VStack {
             HStack {
                 Text(card.rank.symbol)
-                    .color(suitColor)
+                    .foregroundColor(suitColor)
                     .font(Font.system(size: 30))
                     .bold()
                 Spacer()
@@ -143,7 +143,7 @@ struct CardView : View {
             HStack {
                 Spacer()
                 Text(card.suit.symbol)
-                    .color(suitColor)
+                    .foregroundColor(suitColor)
                     .font(Font.system(size: 36))
             }
         }
@@ -166,7 +166,7 @@ struct HoldMarker : View {
     let color: Color
     var body: some View {
         Text("HOLD")
-            .color(color)
+            .foregroundColor(color)
             .font(Font.custom("Futura-CondensedExtraBold", size: 20))
             .rotationEffect(Angle(degrees: -35))
             .scaleEffect(Length(1.6))

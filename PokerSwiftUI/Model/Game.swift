@@ -12,7 +12,6 @@ private let attractModeCards: [Card] = [
 
 /// The model for the state of the poker game.
 class Game: BindableObject {
-    
     enum GameState {
         case newGame
         case afterDeal
@@ -20,7 +19,7 @@ class Game: BindableObject {
         case outOfCredits
     }
     
-    private(set) var didChange = PassthroughSubject<Game, Never>()
+    private(set) var willChange = PassthroughSubject<Game, Never>()
     
     private(set) var state: GameState
     private(set) var creditsRemaining: Int
@@ -107,27 +106,28 @@ class Game: BindableObject {
     func onTap(card: Card) {
         if state == .afterDeal {
             if heldCards.contains(card) {
+                willChange.send(self)
                 heldCards.remove(card)
             }
             else {
+                willChange.send(self)
                 heldCards.insert(card)
             }
-            
-            didChange.send(self)
         }
     }
     
     func onTapActionButton() {
         switch state {
         case .newGame, .afterDraw:
+            willChange.send(self)
             deal()
         case .afterDeal:
+            willChange.send(self)
             draw()
         case .outOfCredits:
+            willChange.send(self)
             newGame()
-        }
-        
-        didChange.send(self)
+        }        
     }
 
     private func newGame() {
