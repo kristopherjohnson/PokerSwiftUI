@@ -4,16 +4,15 @@ extension Card : Identifiable {}
 
 /// Main view for the app.
 struct ContentView : View {
-    @ObjectBinding var model = Game()
+    @ObservedObject var model = Game()
     
     var body: some View {
         VStack {
             Spacer()
-            
+
             PayoutsView()
                 .padding()
-                .background(payoutsBackgroundColor,
-                            cornerRadius: 20)
+                .background(payoutsBackgroundColor)
             
             if model.state != .newGame {
                 HStack {
@@ -78,9 +77,8 @@ struct ContentView : View {
                     .font(.largeTitle)
                     .padding()
                     .frame(width: 130)
-                    .background(actionButtonColor,
-                                cornerRadius: 8)
             }
+            .background(actionButtonColor)
             
             Spacer()
         }
@@ -149,7 +147,7 @@ struct CardView : View {
         }
         .padding(.all, 4)
         .frame(width: 56)
-        .background(Color.white, cornerRadius: 4)
+        .background(Color.white)
     }
     
     private var suitColor: Color {
@@ -169,7 +167,7 @@ struct HoldMarker : View {
             .foregroundColor(color)
             .font(Font.custom("Futura-CondensedExtraBold", size: 20))
             .rotationEffect(Angle(degrees: -35))
-            .scaleEffect(Length(1.6))
+            .scaleEffect(CGFloat(1.6))
     }
 }
 
