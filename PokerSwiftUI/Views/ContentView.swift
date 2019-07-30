@@ -1,7 +1,5 @@
 import SwiftUI
 
-extension Card : Identifiable {}
-
 /// Main view for the app.
 struct ContentView : View {
     @ObservedObject var model = Game()
