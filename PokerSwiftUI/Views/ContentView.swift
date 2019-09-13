@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var model: Game
+    @ObservedObject var model = Game()
     
     var body: some View {
         VStack {
@@ -180,6 +180,5 @@ struct HoldMarker : View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(Game())
     }
 }

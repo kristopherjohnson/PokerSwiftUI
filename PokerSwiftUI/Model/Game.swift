@@ -19,8 +19,6 @@ final class Game: ObservableObject {
         case outOfCredits
     }
     
-    private(set) var objectWillChange = PassthroughSubject<Game, Never>()
-    
     @Published private(set) var state: GameState
     @Published private(set) var creditsRemaining: Int
     @Published private(set) var hand: Hand
@@ -106,19 +104,15 @@ final class Game: ObservableObject {
     func onTap(card: Card) {
         if state == .afterDeal {
             if heldCards.contains(card) {
-                objectWillChange.send(self)
                 heldCards.remove(card)
             }
             else {
-                objectWillChange.send(self)
                 heldCards.insert(card)
             }
         }
     }
     
     func onTapActionButton() {
-        objectWillChange.send(self)
-
         switch state {
         case .newGame, .afterDraw:
             deal()
