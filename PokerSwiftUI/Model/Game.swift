@@ -11,7 +11,7 @@ private let attractModeCards: [Card] = [
 ]
 
 /// The model for the state of the poker game.
-class Game: ObservableObject {
+final class Game: ObservableObject {
     enum GameState {
         case newGame
         case afterDeal
@@ -19,11 +19,13 @@ class Game: ObservableObject {
         case outOfCredits
     }
     
+    private(set) var objectWillChange = PassthroughSubject<Game, Never>()
+    
     @Published private(set) var state: GameState
     @Published private(set) var creditsRemaining: Int
     @Published private(set) var hand: Hand
     @Published private(set) var heldCards: Set<Card>
-    private var deck: Deck
+    private(set) var deck: Deck
     
     /// Text displayed below the cards.
     var scoreLine: String {
@@ -104,15 +106,19 @@ class Game: ObservableObject {
     func onTap(card: Card) {
         if state == .afterDeal {
             if heldCards.contains(card) {
+                objectWillChange.send(self)
                 heldCards.remove(card)
             }
             else {
+                objectWillChange.send(self)
                 heldCards.insert(card)
             }
         }
     }
     
     func onTapActionButton() {
+        objectWillChange.send(self)
+
         switch state {
         case .newGame, .afterDraw:
             deal()
@@ -140,6 +146,7 @@ class Game: ObservableObject {
     private func draw() {
         var cardsAfterDraw = [Card]()
         cardsAfterDraw.reserveCapacity(cardsPerHand)
+        
         for i in 0..<cardsPerHand {
             if heldCards.contains(hand.cards[i]) {
                 cardsAfterDraw.append(hand.cards[i])
@@ -148,6 +155,7 @@ class Game: ObservableObject {
                 cardsAfterDraw.append(deck.drawCard()!)
             }
         }
+        
         hand = Hand(cards: cardsAfterDraw)
 
         creditsRemaining += hand.score.payout

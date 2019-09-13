@@ -1,8 +1,15 @@
+//
+//  ContentView.swift
+//  PokerSwiftUI
+//
+//  Created by Kristopher Johnson on 9/12/19.
+//  Copyright © 2019 Kristopher Johnson. All rights reserved.
+//
+
 import SwiftUI
 
-/// Main view for the app.
-struct ContentView : View {
-    @ObservedObject var model = Game()
+struct ContentView: View {
+    @EnvironmentObject var model: Game
     
     var body: some View {
         VStack {
@@ -11,7 +18,8 @@ struct ContentView : View {
             PayoutsView()
                 .padding()
                 .background(payoutsBackgroundColor)
-            
+                .cornerRadius(20)
+                        
             if model.state != .newGame {
                 HStack {
                     Text("Credits Remaining:")
@@ -21,11 +29,11 @@ struct ContentView : View {
                 }
                 .padding(.top)
             }
-            
+
             HStack {
                 Spacer()
                 if model.state == .newGame {
-                    Text("Jacks or Better Poker")
+                    Text(verbatim: "Jacks or Better Poker")
                         .font(.largeTitle)
                         .foregroundColor(.yellow)
                 }
@@ -42,7 +50,6 @@ struct ContentView : View {
                                     
                                     if self.model.heldCards.contains(card) {
                                         HoldMarker(color: self.holdMarkerShadowColor)
-                                            .offset(y: 3)
                                             .opacity(self.holdOpacity * 0.7)
                                         HoldMarker(color: self.holdMarkerColor)
                                             .opacity(self.holdOpacity)
@@ -55,8 +62,7 @@ struct ContentView : View {
                 }
                 Spacer()
             }
-            .padding()
-
+            
             VStack {
                 Text(model.scoreLine)
                     .font(.headline)
@@ -65,7 +71,7 @@ struct ContentView : View {
                 Text(model.instructionsBottomLine)
             }
             .padding(.bottom)
-            
+
             Button(action: {
                 withAnimation {
                     self.model.onTapActionButton()
@@ -75,9 +81,10 @@ struct ContentView : View {
                     .font(.largeTitle)
                     .padding()
                     .frame(width: 130)
+                    .background(actionButtonColor)
+                    .cornerRadius(8)
             }
-            .background(actionButtonColor)
-            
+
             Spacer()
         }
         .background(viewBackgroundColor)
@@ -146,6 +153,7 @@ struct CardView : View {
         .padding(.all, 4)
         .frame(width: 56)
         .background(Color.white)
+        .cornerRadius(4)
     }
     
     private var suitColor: Color {
@@ -165,14 +173,13 @@ struct HoldMarker : View {
             .foregroundColor(color)
             .font(Font.custom("Futura-CondensedExtraBold", size: 20))
             .rotationEffect(Angle(degrees: -35))
-            .scaleEffect(CGFloat(1.6))
+            .scaleEffect(1.6)
     }
 }
 
-#if DEBUG
-struct ContentView_Previews : PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        return ContentView()
+        ContentView()
+            .environmentObject(Game())
     }
 }
-#endif

@@ -1,7 +1,7 @@
 import Foundation
 
 /// Representation of a playing card
-struct Card: Equatable, Hashable, CustomStringConvertible, Identifiable {
+struct Card: Equatable, Hashable, Identifiable, CustomStringConvertible {
     let rank: Rank
     let suit: Suit
     

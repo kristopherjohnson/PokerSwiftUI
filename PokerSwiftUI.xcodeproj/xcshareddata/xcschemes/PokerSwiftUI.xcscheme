@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4E6E10CB22B3078900A16817"
+               BlueprintIdentifier = "4E07F246232B05A1006BA35F"
                BuildableName = "PokerSwiftUI.app"
                BlueprintName = "PokerSwiftUI"
                ReferencedContainer = "container:PokerSwiftUI.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4E6E10E122B3078B00A16817"
+               BlueprintIdentifier = "4E07F25C232B05A2006BA35F"
                BuildableName = "PokerSwiftUITests.xctest"
                BlueprintName = "PokerSwiftUITests"
                ReferencedContainer = "container:PokerSwiftUI.xcodeproj">
@@ -42,7 +42,7 @@
             skipped = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4E6E10EC22B3078B00A16817"
+               BlueprintIdentifier = "4E07F267232B05A2006BA35F"
                BuildableName = "PokerSwiftUIUITests.xctest"
                BlueprintName = "PokerSwiftUIUITests"
                ReferencedContainer = "container:PokerSwiftUI.xcodeproj">
@@ -64,7 +64,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4E6E10CB22B3078900A16817"
+            BlueprintIdentifier = "4E07F246232B05A1006BA35F"
             BuildableName = "PokerSwiftUI.app"
             BlueprintName = "PokerSwiftUI"
             ReferencedContainer = "container:PokerSwiftUI.xcodeproj">
@@ -81,7 +81,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4E6E10CB22B3078900A16817"
+            BlueprintIdentifier = "4E07F246232B05A1006BA35F"
             BuildableName = "PokerSwiftUI.app"
             BlueprintName = "PokerSwiftUI"
             ReferencedContainer = "container:PokerSwiftUI.xcodeproj">

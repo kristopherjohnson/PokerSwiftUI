@@ -1,11 +1,3 @@
-//
-//  PokerSwiftUITests.swift
-//  PokerSwiftUITests
-//
-//  Created by Kristopher Johnson on 6/13/19.
-//  Copyright © 2019 Kristopher Johnson. All rights reserved.
-//
-
 import XCTest
 @testable import PokerSwiftUI
 
@@ -17,21 +9,21 @@ class PokerSwiftUITests: XCTestCase {
         XCTAssertEqual(deck.cards.count, 52,
                        "Must be complete deck of 52 cards")
 
-        XCTAssertEqual(deck.cards[0], Card(.ace,.clubs))
-        XCTAssertEqual(deck.cards[1], Card(.two, .clubs))
+        XCTAssertEqual(deck.cards[0].description, Card(.ace,.clubs).description)
+        XCTAssertEqual(deck.cards[1].description, Card(.two, .clubs).description)
 
-        XCTAssertEqual(deck.cards[50], Card(.queen, .spades))
-        XCTAssertEqual(deck.cards[51], Card(.king, .spades))
+        XCTAssertEqual(deck.cards[50].description, Card(.queen, .spades).description)
+        XCTAssertEqual(deck.cards[51].description, Card(.king, .spades).description)
         
         if let firstDrawnCard = deck.drawCard() {
-            XCTAssertEqual(firstDrawnCard, Card(.king, .spades))
+            XCTAssertEqual(firstDrawnCard.description, Card(.king, .spades).description)
         }
         else {
             XCTFail("drawCard failed")
         }
         
         if let secondDrawnCard = deck.drawCard() {
-            XCTAssertEqual(secondDrawnCard, Card(.queen, .spades))
+            XCTAssertEqual(secondDrawnCard.description, Card(.queen, .spades).description)
         }
         else {
             XCTFail("drawCard failed")

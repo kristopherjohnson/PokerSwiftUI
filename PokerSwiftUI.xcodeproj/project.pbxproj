@@ -7,86 +7,86 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E6E10D022B3078900A16817 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E10CF22B3078900A16817 /* AppDelegate.swift */; };
-		4E6E10D222B3078900A16817 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E10D122B3078900A16817 /* SceneDelegate.swift */; };
-		4E6E10D422B3078900A16817 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E10D322B3078900A16817 /* ContentView.swift */; };
-		4E6E10D622B3078B00A16817 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E6E10D522B3078B00A16817 /* Assets.xcassets */; };
-		4E6E10D922B3078B00A16817 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E6E10D822B3078B00A16817 /* Preview Assets.xcassets */; };
-		4E6E10DC22B3078B00A16817 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E6E10DA22B3078B00A16817 /* LaunchScreen.storyboard */; };
-		4E6E10E722B3078B00A16817 /* PokerSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E10E622B3078B00A16817 /* PokerSwiftUITests.swift */; };
-		4E6E10F222B3078B00A16817 /* PokerSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E10F122B3078B00A16817 /* PokerSwiftUIUITests.swift */; };
-		4E6E110022B309C400A16817 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E10FF22B309C400A16817 /* Card.swift */; };
-		4EC0411922B44C1B00EC5FDF /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC0411822B44C1B00EC5FDF /* Score.swift */; };
-		4EC0411B22B5007C00EC5FDF /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC0411A22B5007C00EC5FDF /* Game.swift */; };
-		4EC0411D22B5071800EC5FDF /* PayoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC0411C22B5071800EC5FDF /* PayoutsView.swift */; };
-		4EC0411F22B5083000EC5FDF /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC0411E22B5083000EC5FDF /* Hand.swift */; };
-		4EC0412122B5093700EC5FDF /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC0412022B5093700EC5FDF /* Deck.swift */; };
-		4EF589C722B5752B00F698C7 /* ScoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF589C622B5752B00F698C7 /* ScoreTests.swift */; };
-		4EF589C922B696BE00F698C7 /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF589C822B696BE00F698C7 /* CardTests.swift */; };
-		4EF589CB22B6984600F698C7 /* Suit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF589CA22B6984600F698C7 /* Suit.swift */; };
-		4EF589CD22B6986A00F698C7 /* Rank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF589CC22B6986A00F698C7 /* Rank.swift */; };
+		4E07F24B232B05A1006BA35F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E07F24A232B05A1006BA35F /* AppDelegate.swift */; };
+		4E07F24D232B05A1006BA35F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E07F24C232B05A1006BA35F /* SceneDelegate.swift */; };
+		4E07F24F232B05A1006BA35F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E07F24E232B05A1006BA35F /* ContentView.swift */; };
+		4E07F251232B05A2006BA35F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E07F250232B05A2006BA35F /* Assets.xcassets */; };
+		4E07F254232B05A2006BA35F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E07F253232B05A2006BA35F /* Preview Assets.xcassets */; };
+		4E07F257232B05A2006BA35F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E07F255232B05A2006BA35F /* LaunchScreen.storyboard */; };
+		4E07F262232B05A2006BA35F /* PokerSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E07F261232B05A2006BA35F /* PokerSwiftUITests.swift */; };
+		4E07F26D232B05A2006BA35F /* PokerSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E07F26C232B05A2006BA35F /* PokerSwiftUIUITests.swift */; };
+		4EFB3CE9232B06B100B90CF6 /* ScoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB3CE7232B06B100B90CF6 /* ScoreTests.swift */; };
+		4EFB3CEA232B06B100B90CF6 /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB3CE8232B06B100B90CF6 /* CardTests.swift */; };
+		4EFB3CEB232B06DE00B90CF6 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB3CE0232B066E00B90CF6 /* Hand.swift */; };
+		4EFB3CEC232B06DE00B90CF6 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB3CE1232B066E00B90CF6 /* Score.swift */; };
+		4EFB3CED232B06DE00B90CF6 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB3CE2232B066E00B90CF6 /* Game.swift */; };
+		4EFB3CEE232B06DE00B90CF6 /* Rank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB3CE3232B066E00B90CF6 /* Rank.swift */; };
+		4EFB3CEF232B06DE00B90CF6 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB3CE4232B066E00B90CF6 /* Card.swift */; };
+		4EFB3CF0232B06DE00B90CF6 /* Suit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB3CE5232B066E00B90CF6 /* Suit.swift */; };
+		4EFB3CF1232B06DE00B90CF6 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB3CE6232B066E00B90CF6 /* Deck.swift */; };
+		4EFB3CF4232B084C00B90CF6 /* PayoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFB3CF3232B084C00B90CF6 /* PayoutsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4E6E10E322B3078B00A16817 /* PBXContainerItemProxy */ = {
+		4E07F25E232B05A2006BA35F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4E6E10C422B3078900A16817 /* Project object */;
+			containerPortal = 4E07F23F232B05A1006BA35F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4E6E10CB22B3078900A16817;
+			remoteGlobalIDString = 4E07F246232B05A1006BA35F;
 			remoteInfo = PokerSwiftUI;
 		};
-		4E6E10EE22B3078B00A16817 /* PBXContainerItemProxy */ = {
+		4E07F269232B05A2006BA35F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4E6E10C422B3078900A16817 /* Project object */;
+			containerPortal = 4E07F23F232B05A1006BA35F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4E6E10CB22B3078900A16817;
+			remoteGlobalIDString = 4E07F246232B05A1006BA35F;
 			remoteInfo = PokerSwiftUI;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4E6E10CC22B3078900A16817 /* PokerSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokerSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E6E10CF22B3078900A16817 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4E6E10D122B3078900A16817 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4E6E10D322B3078900A16817 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		4E6E10D522B3078B00A16817 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4E6E10D822B3078B00A16817 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4E6E10DB22B3078B00A16817 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4E6E10DD22B3078B00A16817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E6E10E222B3078B00A16817 /* PokerSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokerSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E6E10E622B3078B00A16817 /* PokerSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokerSwiftUITests.swift; sourceTree = "<group>"; };
-		4E6E10E822B3078B00A16817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E6E10ED22B3078B00A16817 /* PokerSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokerSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E6E10F122B3078B00A16817 /* PokerSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokerSwiftUIUITests.swift; sourceTree = "<group>"; };
-		4E6E10F322B3078B00A16817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E6E10FF22B309C400A16817 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		4EC0411822B44C1B00EC5FDF /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
-		4EC0411A22B5007C00EC5FDF /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		4EC0411C22B5071800EC5FDF /* PayoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayoutsView.swift; sourceTree = "<group>"; };
-		4EC0411E22B5083000EC5FDF /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
-		4EC0412022B5093700EC5FDF /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
-		4EF589C622B5752B00F698C7 /* ScoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTests.swift; sourceTree = "<group>"; };
-		4EF589C822B696BE00F698C7 /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
-		4EF589CA22B6984600F698C7 /* Suit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suit.swift; sourceTree = "<group>"; };
-		4EF589CC22B6986A00F698C7 /* Rank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rank.swift; sourceTree = "<group>"; };
+		4E07F247232B05A1006BA35F /* PokerSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokerSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E07F24A232B05A1006BA35F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4E07F24C232B05A1006BA35F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4E07F24E232B05A1006BA35F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4E07F250232B05A2006BA35F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4E07F253232B05A2006BA35F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4E07F256232B05A2006BA35F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4E07F258232B05A2006BA35F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E07F25D232B05A2006BA35F /* PokerSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokerSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E07F261232B05A2006BA35F /* PokerSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokerSwiftUITests.swift; sourceTree = "<group>"; };
+		4E07F263232B05A2006BA35F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E07F268232B05A2006BA35F /* PokerSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokerSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E07F26C232B05A2006BA35F /* PokerSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokerSwiftUIUITests.swift; sourceTree = "<group>"; };
+		4E07F26E232B05A2006BA35F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EFB3CE0232B066E00B90CF6 /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
+		4EFB3CE1232B066E00B90CF6 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		4EFB3CE2232B066E00B90CF6 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		4EFB3CE3232B066E00B90CF6 /* Rank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rank.swift; sourceTree = "<group>"; };
+		4EFB3CE4232B066E00B90CF6 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		4EFB3CE5232B066E00B90CF6 /* Suit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suit.swift; sourceTree = "<group>"; };
+		4EFB3CE6232B066E00B90CF6 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		4EFB3CE7232B06B100B90CF6 /* ScoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreTests.swift; sourceTree = "<group>"; };
+		4EFB3CE8232B06B100B90CF6 /* CardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
+		4EFB3CF3232B084C00B90CF6 /* PayoutsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayoutsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4E6E10C922B3078900A16817 /* Frameworks */ = {
+		4E07F244232B05A1006BA35F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E6E10DF22B3078B00A16817 /* Frameworks */ = {
+		4E07F25A232B05A2006BA35F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E6E10EA22B3078B00A16817 /* Frameworks */ = {
+		4E07F265232B05A2006BA35F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -96,88 +96,88 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4E6E10C322B3078900A16817 = {
+		4E07F23E232B05A1006BA35F = {
 			isa = PBXGroup;
 			children = (
-				4E6E10CE22B3078900A16817 /* PokerSwiftUI */,
-				4E6E10E522B3078B00A16817 /* PokerSwiftUITests */,
-				4E6E10F022B3078B00A16817 /* PokerSwiftUIUITests */,
-				4E6E10CD22B3078900A16817 /* Products */,
+				4E07F249232B05A1006BA35F /* PokerSwiftUI */,
+				4E07F260232B05A2006BA35F /* PokerSwiftUITests */,
+				4E07F26B232B05A2006BA35F /* PokerSwiftUIUITests */,
+				4E07F248232B05A1006BA35F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4E6E10CD22B3078900A16817 /* Products */ = {
+		4E07F248232B05A1006BA35F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4E6E10CC22B3078900A16817 /* PokerSwiftUI.app */,
-				4E6E10E222B3078B00A16817 /* PokerSwiftUITests.xctest */,
-				4E6E10ED22B3078B00A16817 /* PokerSwiftUIUITests.xctest */,
+				4E07F247232B05A1006BA35F /* PokerSwiftUI.app */,
+				4E07F25D232B05A2006BA35F /* PokerSwiftUITests.xctest */,
+				4E07F268232B05A2006BA35F /* PokerSwiftUIUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4E6E10CE22B3078900A16817 /* PokerSwiftUI */ = {
+		4E07F249232B05A1006BA35F /* PokerSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				4E6E10CF22B3078900A16817 /* AppDelegate.swift */,
-				4E6E10D522B3078B00A16817 /* Assets.xcassets */,
-				4E6E10DD22B3078B00A16817 /* Info.plist */,
-				4E6E10DA22B3078B00A16817 /* LaunchScreen.storyboard */,
-				4EF589CE22B698A000F698C7 /* Model */,
-				4E6E10D722B3078B00A16817 /* Preview Content */,
-				4E6E10D122B3078900A16817 /* SceneDelegate.swift */,
-				4EF589CF22B69B2800F698C7 /* Views */,
+				4E07F24A232B05A1006BA35F /* AppDelegate.swift */,
+				4E07F250232B05A2006BA35F /* Assets.xcassets */,
+				4E07F258232B05A2006BA35F /* Info.plist */,
+				4E07F255232B05A2006BA35F /* LaunchScreen.storyboard */,
+				4EFB3CDF232B066E00B90CF6 /* Model */,
+				4E07F252232B05A2006BA35F /* Preview Content */,
+				4E07F24C232B05A1006BA35F /* SceneDelegate.swift */,
+				4EFB3CF2232B081B00B90CF6 /* Views */,
 			);
 			path = PokerSwiftUI;
 			sourceTree = "<group>";
 		};
-		4E6E10D722B3078B00A16817 /* Preview Content */ = {
+		4E07F252232B05A2006BA35F /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				4E6E10D822B3078B00A16817 /* Preview Assets.xcassets */,
+				4E07F253232B05A2006BA35F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		4E6E10E522B3078B00A16817 /* PokerSwiftUITests */ = {
+		4E07F260232B05A2006BA35F /* PokerSwiftUITests */ = {
 			isa = PBXGroup;
 			children = (
-				4EF589C822B696BE00F698C7 /* CardTests.swift */,
-				4E6E10E822B3078B00A16817 /* Info.plist */,
-				4E6E10E622B3078B00A16817 /* PokerSwiftUITests.swift */,
-				4EF589C622B5752B00F698C7 /* ScoreTests.swift */,
+				4EFB3CE8232B06B100B90CF6 /* CardTests.swift */,
+				4E07F263232B05A2006BA35F /* Info.plist */,
+				4E07F261232B05A2006BA35F /* PokerSwiftUITests.swift */,
+				4EFB3CE7232B06B100B90CF6 /* ScoreTests.swift */,
 			);
 			path = PokerSwiftUITests;
 			sourceTree = "<group>";
 		};
-		4E6E10F022B3078B00A16817 /* PokerSwiftUIUITests */ = {
+		4E07F26B232B05A2006BA35F /* PokerSwiftUIUITests */ = {
 			isa = PBXGroup;
 			children = (
-				4E6E10F122B3078B00A16817 /* PokerSwiftUIUITests.swift */,
-				4E6E10F322B3078B00A16817 /* Info.plist */,
+				4E07F26E232B05A2006BA35F /* Info.plist */,
+				4E07F26C232B05A2006BA35F /* PokerSwiftUIUITests.swift */,
 			);
 			path = PokerSwiftUIUITests;
 			sourceTree = "<group>";
 		};
-		4EF589CE22B698A000F698C7 /* Model */ = {
+		4EFB3CDF232B066E00B90CF6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4E6E10FF22B309C400A16817 /* Card.swift */,
-				4EC0412022B5093700EC5FDF /* Deck.swift */,
-				4EC0411A22B5007C00EC5FDF /* Game.swift */,
-				4EC0411E22B5083000EC5FDF /* Hand.swift */,
-				4EF589CC22B6986A00F698C7 /* Rank.swift */,
-				4EC0411822B44C1B00EC5FDF /* Score.swift */,
-				4EF589CA22B6984600F698C7 /* Suit.swift */,
+				4EFB3CE0232B066E00B90CF6 /* Hand.swift */,
+				4EFB3CE1232B066E00B90CF6 /* Score.swift */,
+				4EFB3CE2232B066E00B90CF6 /* Game.swift */,
+				4EFB3CE3232B066E00B90CF6 /* Rank.swift */,
+				4EFB3CE4232B066E00B90CF6 /* Card.swift */,
+				4EFB3CE5232B066E00B90CF6 /* Suit.swift */,
+				4EFB3CE6232B066E00B90CF6 /* Deck.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		4EF589CF22B69B2800F698C7 /* Views */ = {
+		4EFB3CF2232B081B00B90CF6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4E6E10D322B3078900A16817 /* ContentView.swift */,
-				4EC0411C22B5071800EC5FDF /* PayoutsView.swift */,
+				4E07F24E232B05A1006BA35F /* ContentView.swift */,
+				4EFB3CF3232B084C00B90CF6 /* PayoutsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,13 +185,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4E6E10CB22B3078900A16817 /* PokerSwiftUI */ = {
+		4E07F246232B05A1006BA35F /* PokerSwiftUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E6E10F622B3078B00A16817 /* Build configuration list for PBXNativeTarget "PokerSwiftUI" */;
+			buildConfigurationList = 4E07F271232B05A2006BA35F /* Build configuration list for PBXNativeTarget "PokerSwiftUI" */;
 			buildPhases = (
-				4E6E10C822B3078900A16817 /* Sources */,
-				4E6E10C922B3078900A16817 /* Frameworks */,
-				4E6E10CA22B3078900A16817 /* Resources */,
+				4E07F243232B05A1006BA35F /* Sources */,
+				4E07F244232B05A1006BA35F /* Frameworks */,
+				4E07F245232B05A1006BA35F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -199,69 +199,69 @@
 			);
 			name = PokerSwiftUI;
 			productName = PokerSwiftUI;
-			productReference = 4E6E10CC22B3078900A16817 /* PokerSwiftUI.app */;
+			productReference = 4E07F247232B05A1006BA35F /* PokerSwiftUI.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4E6E10E122B3078B00A16817 /* PokerSwiftUITests */ = {
+		4E07F25C232B05A2006BA35F /* PokerSwiftUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E6E10F922B3078B00A16817 /* Build configuration list for PBXNativeTarget "PokerSwiftUITests" */;
+			buildConfigurationList = 4E07F274232B05A2006BA35F /* Build configuration list for PBXNativeTarget "PokerSwiftUITests" */;
 			buildPhases = (
-				4E6E10DE22B3078B00A16817 /* Sources */,
-				4E6E10DF22B3078B00A16817 /* Frameworks */,
-				4E6E10E022B3078B00A16817 /* Resources */,
+				4E07F259232B05A2006BA35F /* Sources */,
+				4E07F25A232B05A2006BA35F /* Frameworks */,
+				4E07F25B232B05A2006BA35F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4E6E10E422B3078B00A16817 /* PBXTargetDependency */,
+				4E07F25F232B05A2006BA35F /* PBXTargetDependency */,
 			);
 			name = PokerSwiftUITests;
 			productName = PokerSwiftUITests;
-			productReference = 4E6E10E222B3078B00A16817 /* PokerSwiftUITests.xctest */;
+			productReference = 4E07F25D232B05A2006BA35F /* PokerSwiftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4E6E10EC22B3078B00A16817 /* PokerSwiftUIUITests */ = {
+		4E07F267232B05A2006BA35F /* PokerSwiftUIUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E6E10FC22B3078B00A16817 /* Build configuration list for PBXNativeTarget "PokerSwiftUIUITests" */;
+			buildConfigurationList = 4E07F277232B05A2006BA35F /* Build configuration list for PBXNativeTarget "PokerSwiftUIUITests" */;
 			buildPhases = (
-				4E6E10E922B3078B00A16817 /* Sources */,
-				4E6E10EA22B3078B00A16817 /* Frameworks */,
-				4E6E10EB22B3078B00A16817 /* Resources */,
+				4E07F264232B05A2006BA35F /* Sources */,
+				4E07F265232B05A2006BA35F /* Frameworks */,
+				4E07F266232B05A2006BA35F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4E6E10EF22B3078B00A16817 /* PBXTargetDependency */,
+				4E07F26A232B05A2006BA35F /* PBXTargetDependency */,
 			);
 			name = PokerSwiftUIUITests;
 			productName = PokerSwiftUIUITests;
-			productReference = 4E6E10ED22B3078B00A16817 /* PokerSwiftUIUITests.xctest */;
+			productReference = 4E07F268232B05A2006BA35F /* PokerSwiftUIUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4E6E10C422B3078900A16817 /* Project object */ = {
+		4E07F23F232B05A1006BA35F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Kristopher Johnson";
 				TargetAttributes = {
-					4E6E10CB22B3078900A16817 = {
+					4E07F246232B05A1006BA35F = {
 						CreatedOnToolsVersion = 11.0;
 					};
-					4E6E10E122B3078B00A16817 = {
+					4E07F25C232B05A2006BA35F = {
 						CreatedOnToolsVersion = 11.0;
-						TestTargetID = 4E6E10CB22B3078900A16817;
+						TestTargetID = 4E07F246232B05A1006BA35F;
 					};
-					4E6E10EC22B3078B00A16817 = {
+					4E07F267232B05A2006BA35F = {
 						CreatedOnToolsVersion = 11.0;
-						TestTargetID = 4E6E10CB22B3078900A16817;
+						TestTargetID = 4E07F246232B05A1006BA35F;
 					};
 				};
 			};
-			buildConfigurationList = 4E6E10C722B3078900A16817 /* Build configuration list for PBXProject "PokerSwiftUI" */;
+			buildConfigurationList = 4E07F242232B05A1006BA35F /* Build configuration list for PBXProject "PokerSwiftUI" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -269,37 +269,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 4E6E10C322B3078900A16817;
-			productRefGroup = 4E6E10CD22B3078900A16817 /* Products */;
+			mainGroup = 4E07F23E232B05A1006BA35F;
+			productRefGroup = 4E07F248232B05A1006BA35F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4E6E10CB22B3078900A16817 /* PokerSwiftUI */,
-				4E6E10E122B3078B00A16817 /* PokerSwiftUITests */,
-				4E6E10EC22B3078B00A16817 /* PokerSwiftUIUITests */,
+				4E07F246232B05A1006BA35F /* PokerSwiftUI */,
+				4E07F25C232B05A2006BA35F /* PokerSwiftUITests */,
+				4E07F267232B05A2006BA35F /* PokerSwiftUIUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4E6E10CA22B3078900A16817 /* Resources */ = {
+		4E07F245232B05A1006BA35F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E6E10DC22B3078B00A16817 /* LaunchScreen.storyboard in Resources */,
-				4E6E10D922B3078B00A16817 /* Preview Assets.xcassets in Resources */,
-				4E6E10D622B3078B00A16817 /* Assets.xcassets in Resources */,
+				4E07F257232B05A2006BA35F /* LaunchScreen.storyboard in Resources */,
+				4E07F254232B05A2006BA35F /* Preview Assets.xcassets in Resources */,
+				4E07F251232B05A2006BA35F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E6E10E022B3078B00A16817 /* Resources */ = {
+		4E07F25B232B05A2006BA35F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E6E10EB22B3078B00A16817 /* Resources */ = {
+		4E07F266232B05A2006BA35F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -309,62 +309,62 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4E6E10C822B3078900A16817 /* Sources */ = {
+		4E07F243232B05A1006BA35F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EC0412122B5093700EC5FDF /* Deck.swift in Sources */,
-				4EF589CD22B6986A00F698C7 /* Rank.swift in Sources */,
-				4EC0411F22B5083000EC5FDF /* Hand.swift in Sources */,
-				4E6E10D022B3078900A16817 /* AppDelegate.swift in Sources */,
-				4EC0411B22B5007C00EC5FDF /* Game.swift in Sources */,
-				4E6E10D222B3078900A16817 /* SceneDelegate.swift in Sources */,
-				4E6E10D422B3078900A16817 /* ContentView.swift in Sources */,
-				4EF589CB22B6984600F698C7 /* Suit.swift in Sources */,
-				4E6E110022B309C400A16817 /* Card.swift in Sources */,
-				4EC0411922B44C1B00EC5FDF /* Score.swift in Sources */,
-				4EC0411D22B5071800EC5FDF /* PayoutsView.swift in Sources */,
+				4EFB3CEB232B06DE00B90CF6 /* Hand.swift in Sources */,
+				4EFB3CED232B06DE00B90CF6 /* Game.swift in Sources */,
+				4EFB3CF1232B06DE00B90CF6 /* Deck.swift in Sources */,
+				4E07F24B232B05A1006BA35F /* AppDelegate.swift in Sources */,
+				4EFB3CF4232B084C00B90CF6 /* PayoutsView.swift in Sources */,
+				4E07F24D232B05A1006BA35F /* SceneDelegate.swift in Sources */,
+				4E07F24F232B05A1006BA35F /* ContentView.swift in Sources */,
+				4EFB3CEE232B06DE00B90CF6 /* Rank.swift in Sources */,
+				4EFB3CEC232B06DE00B90CF6 /* Score.swift in Sources */,
+				4EFB3CF0232B06DE00B90CF6 /* Suit.swift in Sources */,
+				4EFB3CEF232B06DE00B90CF6 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E6E10DE22B3078B00A16817 /* Sources */ = {
+		4E07F259232B05A2006BA35F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EF589C922B696BE00F698C7 /* CardTests.swift in Sources */,
-				4EF589C722B5752B00F698C7 /* ScoreTests.swift in Sources */,
-				4E6E10E722B3078B00A16817 /* PokerSwiftUITests.swift in Sources */,
+				4EFB3CEA232B06B100B90CF6 /* CardTests.swift in Sources */,
+				4EFB3CE9232B06B100B90CF6 /* ScoreTests.swift in Sources */,
+				4E07F262232B05A2006BA35F /* PokerSwiftUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E6E10E922B3078B00A16817 /* Sources */ = {
+		4E07F264232B05A2006BA35F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E6E10F222B3078B00A16817 /* PokerSwiftUIUITests.swift in Sources */,
+				4E07F26D232B05A2006BA35F /* PokerSwiftUIUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4E6E10E422B3078B00A16817 /* PBXTargetDependency */ = {
+		4E07F25F232B05A2006BA35F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4E6E10CB22B3078900A16817 /* PokerSwiftUI */;
-			targetProxy = 4E6E10E322B3078B00A16817 /* PBXContainerItemProxy */;
+			target = 4E07F246232B05A1006BA35F /* PokerSwiftUI */;
+			targetProxy = 4E07F25E232B05A2006BA35F /* PBXContainerItemProxy */;
 		};
-		4E6E10EF22B3078B00A16817 /* PBXTargetDependency */ = {
+		4E07F26A232B05A2006BA35F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4E6E10CB22B3078900A16817 /* PokerSwiftUI */;
-			targetProxy = 4E6E10EE22B3078B00A16817 /* PBXContainerItemProxy */;
+			target = 4E07F246232B05A1006BA35F /* PokerSwiftUI */;
+			targetProxy = 4E07F269232B05A2006BA35F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4E6E10DA22B3078B00A16817 /* LaunchScreen.storyboard */ = {
+		4E07F255232B05A2006BA35F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4E6E10DB22B3078B00A16817 /* Base */,
+				4E07F256232B05A2006BA35F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -372,7 +372,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4E6E10F422B3078B00A16817 /* Debug */ = {
+		4E07F26F232B05A2006BA35F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -432,7 +432,7 @@
 			};
 			name = Debug;
 		};
-		4E6E10F522B3078B00A16817 /* Release */ = {
+		4E07F270232B05A2006BA35F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -486,12 +486,12 @@
 			};
 			name = Release;
 		};
-		4E6E10F722B3078B00A16817 /* Debug */ = {
+		4E07F272232B05A2006BA35F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "PokerSwiftUI/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "\"PokerSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = D5E423632K;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = PokerSwiftUI/Info.plist;
@@ -506,12 +506,12 @@
 			};
 			name = Debug;
 		};
-		4E6E10F822B3078B00A16817 /* Release */ = {
+		4E07F273232B05A2006BA35F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "PokerSwiftUI/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "\"PokerSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = D5E423632K;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = PokerSwiftUI/Info.plist;
@@ -526,7 +526,7 @@
 			};
 			name = Release;
 		};
-		4E6E10FA22B3078B00A16817 /* Debug */ = {
+		4E07F275232B05A2006BA35F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -534,6 +534,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D5E423632K;
 				INFOPLIST_FILE = PokerSwiftUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -547,7 +548,7 @@
 			};
 			name = Debug;
 		};
-		4E6E10FB22B3078B00A16817 /* Release */ = {
+		4E07F276232B05A2006BA35F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -555,6 +556,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D5E423632K;
 				INFOPLIST_FILE = PokerSwiftUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -568,7 +570,7 @@
 			};
 			name = Release;
 		};
-		4E6E10FD22B3078B00A16817 /* Debug */ = {
+		4E07F278232B05A2006BA35F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -588,7 +590,7 @@
 			};
 			name = Debug;
 		};
-		4E6E10FE22B3078B00A16817 /* Release */ = {
+		4E07F279232B05A2006BA35F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -611,43 +613,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4E6E10C722B3078900A16817 /* Build configuration list for PBXProject "PokerSwiftUI" */ = {
+		4E07F242232B05A1006BA35F /* Build configuration list for PBXProject "PokerSwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E6E10F422B3078B00A16817 /* Debug */,
-				4E6E10F522B3078B00A16817 /* Release */,
+				4E07F26F232B05A2006BA35F /* Debug */,
+				4E07F270232B05A2006BA35F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E6E10F622B3078B00A16817 /* Build configuration list for PBXNativeTarget "PokerSwiftUI" */ = {
+		4E07F271232B05A2006BA35F /* Build configuration list for PBXNativeTarget "PokerSwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E6E10F722B3078B00A16817 /* Debug */,
-				4E6E10F822B3078B00A16817 /* Release */,
+				4E07F272232B05A2006BA35F /* Debug */,
+				4E07F273232B05A2006BA35F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E6E10F922B3078B00A16817 /* Build configuration list for PBXNativeTarget "PokerSwiftUITests" */ = {
+		4E07F274232B05A2006BA35F /* Build configuration list for PBXNativeTarget "PokerSwiftUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E6E10FA22B3078B00A16817 /* Debug */,
-				4E6E10FB22B3078B00A16817 /* Release */,
+				4E07F275232B05A2006BA35F /* Debug */,
+				4E07F276232B05A2006BA35F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E6E10FC22B3078B00A16817 /* Build configuration list for PBXNativeTarget "PokerSwiftUIUITests" */ = {
+		4E07F277232B05A2006BA35F /* Build configuration list for PBXNativeTarget "PokerSwiftUIUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E6E10FD22B3078B00A16817 /* Debug */,
-				4E6E10FE22B3078B00A16817 /* Release */,
+				4E07F278232B05A2006BA35F /* Debug */,
+				4E07F279232B05A2006BA35F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4E6E10C422B3078900A16817 /* Project object */;
+	rootObject = 4E07F23F232B05A1006BA35F /* Project object */;
 }
