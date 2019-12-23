@@ -12,82 +12,81 @@ struct ContentView: View {
     @ObservedObject var model = Game()
     
     var body: some View {
-        VStack {
-            Spacer()
+        ZStack {
+            viewBackgroundColor
 
-            PayoutsView()
-                .padding()
-                .background(payoutsBackgroundColor)
-                .cornerRadius(20)
-                        
-            if model.state != .newGame {
+            VStack {
+
+                PayoutsView()
+                    .padding()
+                    .background(payoutsBackgroundColor)
+                    .cornerRadius(20)
+
+                if model.state != .newGame {
+                    HStack {
+                        Text("Credits Remaining:")
+                        Text(model.creditsRemaining.description)
+                            .foregroundColor(creditsRemainingColor)
+                            .bold()
+                    }
+                    .padding(.top)
+                }
+
                 HStack {
-                    Text("Credits Remaining:")
-                    Text(model.creditsRemaining.description)
-                        .foregroundColor(creditsRemainingColor)
-                        .bold()
-                }
-                .padding(.top)
-            }
+                    if model.state == .newGame {
+                        Text(verbatim: "Jacks or Better Poker")
+                            .font(.largeTitle)
+                            .foregroundColor(.yellow)
+                            .padding(.top)
+                    }
+                    else {
+                        HStack(spacing: 7) {
+                            ForEach(model.hand.cards) { card in
+                                Button(action: {
+                                    withAnimation {
+                                        self.model.onTap(card: card)
+                                    }
+                                }) {
+                                    ZStack {
+                                        CardView(card: card)
 
-            HStack {
-                Spacer()
-                if model.state == .newGame {
-                    Text(verbatim: "Jacks or Better Poker")
-                        .font(.largeTitle)
-                        .foregroundColor(.yellow)
-                }
-                else {
-                    HStack(spacing: 7) {
-                        ForEach(model.hand.cards) { card in
-                            Button(action: {
-                                withAnimation {
-                                    self.model.onTap(card: card)
-                                }
-                            }) {
-                                ZStack {
-                                    CardView(card: card)
-                                    
-                                    if self.model.heldCards.contains(card) {
-                                        HoldMarker(color: self.holdMarkerShadowColor)
-                                            .opacity(self.holdOpacity * 0.7)
-                                        HoldMarker(color: self.holdMarkerColor)
-                                            .opacity(self.holdOpacity)
+                                        if self.model.heldCards.contains(card) {
+                                            HoldMarker(color: self.holdMarkerShadowColor)
+                                                .opacity(self.holdOpacity * 0.7)
+                                            HoldMarker(color: self.holdMarkerColor)
+                                                .opacity(self.holdOpacity)
+                                        }
                                     }
                                 }
+                                .disabled(!self.model.isTapCardEnabled)
                             }
-                            .disabled(!self.model.isTapCardEnabled)
                         }
                     }
                 }
-                Spacer()
-            }
-            
-            VStack {
-                Text(model.scoreLine)
-                    .font(.headline)
-                    .padding(.bottom)
-                Text(model.instructionsTopLine)
-                Text(model.instructionsBottomLine)
-            }
-            .padding(.bottom)
 
-            Button(action: {
-                withAnimation {
-                    self.model.onTapActionButton()
+                VStack {
+                    Text(model.scoreLine)
+                        .font(.headline)
+                        .padding(.bottom)
+                    Text(model.instructionsTopLine)
+                    Text(model.instructionsBottomLine)
                 }
-            }) {
-                Text(model.actionButtonTitle)
-                    .font(.largeTitle)
-                    .padding()
-                    .frame(width: 130)
-                    .background(actionButtonColor)
-                    .cornerRadius(8)
-            }
+                .padding(.bottom)
 
-            Spacer()
+                Button(action: {
+                    withAnimation {
+                        self.model.onTapActionButton()
+                    }
+                }) {
+                    Text(model.actionButtonTitle)
+                        .font(.largeTitle)
+                        .padding()
+                        .frame(width: 130)
+                        .background(actionButtonColor)
+                        .cornerRadius(8)
+                }
+            }
         }
-        .background(viewBackgroundColor)
         .foregroundColor(viewForegroundColor)
         .accentColor(viewAccentColor)
         .edgesIgnoringSafeArea(.all)
@@ -150,10 +149,10 @@ struct CardView : View {
                     .font(Font.system(size: 36))
             }
         }
-        .padding(.all, 4)
+        .padding(.all, 6)
         .frame(width: 56)
         .background(Color.white)
-        .cornerRadius(4)
+        .cornerRadius(6)
     }
     
     private var suitColor: Color {
@@ -178,7 +177,16 @@ struct HoldMarker : View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+    static var newGameModel = Game()
+    static var afterDealModel: Game = {
+        var game = Game()
+        game.onTapActionButton()
+        return game
+    }()
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView(model: newGameModel)
+            ContentView(model: afterDealModel)
+        }
     }
 }

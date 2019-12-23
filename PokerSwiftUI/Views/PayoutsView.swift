@@ -4,8 +4,7 @@ import SwiftUI
 struct PayoutsView : View {
     var body: some View {
         VStack {
-            Text("5 credits per bet")
-                .font(Font.custom("Futura", size: 13))
+            Text("Payouts for 5-Credit Bet")
                 .padding(.bottom, 4)
 
             HStack(alignment: .top) {
@@ -16,20 +15,22 @@ struct PayoutsView : View {
                     PayoutLine(score: .fullHouse)
                     PayoutLine(score: .flush)
                 }
-                .padding([.trailing], 3)
+                .padding([.trailing], 4)
                 VStack {
                     PayoutLine(score: .straight)
                     PayoutLine(score: .threeOfAKind)
                     PayoutLine(score: .twoPair)
                     PayoutLine(score: .jacksOrBetter)
                 }
-                .padding([.leading], 3)
+                .padding([.leading], 4)
             }
-            .frame(width: 270)
-            .allowsTightening(true)
-            .font(Font.custom("Futura", size: 13))
+            .frame(width: 280)
         }
+        .font(PayoutsView.font)
+        .allowsTightening(true)
     }
+
+    static var font = Font.custom("Futura", size: 13)
 }
 
 struct PayoutLine : View {
