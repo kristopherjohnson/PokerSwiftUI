@@ -15,14 +15,14 @@ struct PayoutsView : View {
                     PayoutLine(score: .fullHouse)
                     PayoutLine(score: .flush)
                 }
-                .padding([.trailing], 4)
+                .padding([.trailing], 3)
                 VStack {
                     PayoutLine(score: .straight)
                     PayoutLine(score: .threeOfAKind)
                     PayoutLine(score: .twoPair)
                     PayoutLine(score: .jacksOrBetter)
                 }
-                .padding([.leading], 4)
+                .padding([.leading], 3)
             }
             .frame(width: 280)
         }

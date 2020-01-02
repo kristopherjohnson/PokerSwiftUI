@@ -13,14 +13,17 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
+            // Fill background
             viewBackgroundColor
+                .edgesIgnoringSafeArea(.all)
 
             VStack {
 
                 PayoutsView()
-                    .padding()
-                    .background(payoutsBackgroundColor)
-                    .cornerRadius(20)
+                    .padding(6)
+                    .opacity(0.8)
+                    .background(Color(white: 0.0, opacity: 0.1))
+                    .cornerRadius(4)
 
                 if model.state != .newGame {
                     HStack {
@@ -29,7 +32,7 @@ struct ContentView: View {
                             .foregroundColor(creditsRemainingColor)
                             .bold()
                     }
-                    .padding(.top)
+                    .padding([.top, .bottom], 24)
                 }
 
                 HStack {
@@ -37,7 +40,7 @@ struct ContentView: View {
                         Text(verbatim: "Jacks or Better Poker")
                             .font(.largeTitle)
                             .foregroundColor(.yellow)
-                            .padding(.top)
+                            .padding(.top, 40)
                     }
                     else {
                         HStack(spacing: 7) {
@@ -51,10 +54,12 @@ struct ContentView: View {
                                         CardView(card: card)
 
                                         if self.model.heldCards.contains(card) {
-                                            HoldMarker(color: self.holdMarkerShadowColor)
-                                                .opacity(self.holdOpacity * 0.7)
+
                                             HoldMarker(color: self.holdMarkerColor)
-                                                .opacity(self.holdOpacity)
+                                                .opacity(self.holdMarkerOpacity)
+                                                .shadow(color: self.holdMarkerShadowColor,
+                                                        radius: 2,
+                                                        y: 4)
                                         }
                                     }
                                 }
@@ -71,7 +76,7 @@ struct ContentView: View {
                     Text(model.instructionsTopLine)
                     Text(model.instructionsBottomLine)
                 }
-                .padding(.bottom)
+                .padding()
 
                 Button(action: {
                     withAnimation {
@@ -89,7 +94,6 @@ struct ContentView: View {
         }
         .foregroundColor(viewForegroundColor)
         .accentColor(viewAccentColor)
-        .edgesIgnoringSafeArea(.all)
     }
     
     private var viewBackgroundColor: Color {
@@ -108,14 +112,6 @@ struct ContentView: View {
         Color(red:0, green:0.7, blue:0.7)
     }
     
-    private var holdMarkerColor: Color {
-        Color.yellow
-    }
-    
-    private var holdMarkerShadowColor: Color {
-        Color(white: 0.0, opacity: 0.75)
-    }
-    
     private var payoutsBackgroundColor: Color {
         Color(red: 0.0, green: 0.3, blue: 0.3)
     }
@@ -124,8 +120,16 @@ struct ContentView: View {
         Color.yellow
     }
     
-    private var holdOpacity: Double {
-        self.model.state == .afterDeal ? 1.0 : 0.3
+    private var holdMarkerColor: Color {
+        Color.yellow
+    }
+
+    private var holdMarkerShadowColor: Color {
+        Color(.sRGBLinear, white: 0, opacity: 0.75)
+    }
+
+    private var holdMarkerOpacity: Double {
+        self.model.state == .afterDeal ? 1.0 : 0.5
     }
 }
 
@@ -170,19 +174,25 @@ struct HoldMarker : View {
     var body: some View {
         Text("HOLD")
             .foregroundColor(color)
-            .font(Font.custom("Futura-CondensedExtraBold", size: 20))
-            .rotationEffect(Angle(degrees: -35))
+            .font(Font.custom("Futura-CondensedExtraBold", size: 19))
+            .rotationEffect(Angle(degrees: -39))
             .scaleEffect(1.6)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
+    /// Model for new game.
     static var newGameModel = Game()
+
+    /// Game that has been dealt and two cards selected for holding.
     static var afterDealModel: Game = {
         var game = Game()
         game.onTapActionButton()
+        game.onTap(card: game.hand.cards[2])
+        game.onTap(card: game.hand.cards[3])
         return game
     }()
+
     static var previews: some View {
         Group {
             ContentView(model: newGameModel)

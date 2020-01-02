@@ -44,7 +44,7 @@ final class Game: ObservableObject {
     var instructionsTopLine: String {
         switch state {
         case .newGame:
-            return "Welcome to Jacks or Better poker"
+            return "Welcome to Jacks or Better Poker"
         case .afterDeal:
             return "Tap the cards you want to hold"
         case .afterDraw:
